@@ -1,0 +1,24 @@
+.flow-step-dot {
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom styles for app screenshots */
+.app-screenshot {
+    border-radius: 2rem;
+    /* Matches modern phone screen aesthetic */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 320px;
+    /* Standard phone width */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    aspect-ratio: 9/19.5;
+    /* Common smartphone aspect ratio */
+    object-fit: cover;
+}
+
+/* * FAQ Accordion styles: 
+* Las transiciones de rotate y max-height se manejan ahora 
+* con las clases de Tailwind y la lógica de JS (transition-transform duration-300).
+*/

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeryfyApp - Verifica Pagos Yape en Tiempo Real</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#186ecc', // Base: #186ecc
+                        'primary-blue-dark': '#165EB8', // Darker for hover/mockup
+                        'primary-blue-darkest': '#104780', // Darkest for backgrounds (Flow/Footer accents)
+                        'primary-blue-light': '#69A5E0', // Light text/border/footer links
+                        'primary-blue-bg': '#E8F2FA', // Lightest background
+                        'success-green': '#10B981', // Green-500 equivalent, keeping for CTA
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="img/verifyApp-logo.png" alt="VeryfyApp Logo Oficial" class="h-8 md:h-10" />
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#caracteristicas"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Beneficios</a>
+                    <a href="#flujo" class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo
+                        Funciona</a>
+                    <a href="#app-screens"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">App en Acción</a>
+
+                    <a href="#contacto"
+                        class="text-sm font-medium text-white bg-primary-blue px-4 py-2 rounded-lg hover:bg-primary-blue-dark transition shadow-md">Iniciar
+                        Prueba</a>
+                </nav>
+                <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg">
+                    &#9776;
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2">
+            <a href="#caracteristicas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Beneficios</a>
+            <a href="#flujo" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo Funciona</a>
+            <a href="#app-screens" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">App en Acción</a>
+
+            <a href="#contacto"
+                class="block px-4 py-2 text-sm text-white bg-primary-blue m-2 rounded-lg text-center">Iniciar Prueba</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="pt-10 pb-28 bg-white overflow-hidden rounded-b-3xl shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                        <span class="text-primary-blue">Cero Fraude.</span> Control Total.
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-6">
+                        VeryfyApp: La solución definitiva para **verificar pagos Yape en tiempo real**, protegiendo tu
+                        caja y a tus ayudantes de errores y fraudes, incluso si no estás en el local.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#flujo"
+                            class="px-8 py-3 text-lg font-semibold text-primary-blue bg-white border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition shadow-md transform hover:scale-[1.02] text-center">
+                            Ver el Flujo de Trabajo
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative flex justify-center">
+                    <div class="">
+                        <div class="">
+                            <img src="/img/mockup-movil.png" alt="mockup-movil" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Funcionalidades Diseñadas para tu Negocio
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                        VeryfyApp no solo verifica; te da **el control total y la paz mental** que necesitas para
+                        escalar tu operación sin riesgos.
+                    </p>
+                </header>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div
+                        class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start transition hover:shadow-xl">
+                        <div class="text-4xl text-primary-blue mb-3">&#128276;</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Notificación en Tiempo Real</h3>
+                        <p class="text-gray-600">
+                            Adiós a la incertidumbre. El ayudante recibe una notificación de **confirmación inmediata**
+                            segundos después de que el pago Yape se registra en la cuenta del administrador.
+                        </p>
+                    </div>
+                    <div
+                        class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start transition hover:shadow-xl">
+                        <div class="text-4xl text-primary-blue mb-3">&#128100;</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gestión de Ayudantes</h3>
+                        <p class="text-gray-600">
+                            El Admin puede **registrar múltiples números de teléfono** de ayudantes. Cada uno recibirá
+                            la alerta y podrá consultar el panel de pagos.
+                        </p>
+                    </div>
+                    <div
+                        class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start transition hover:shadow-xl">
+                        <div class="text-4xl text-primary-blue mb-3">&#128202;</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Panel de Pagos Unificado</h3>
+                        <p class="text-gray-600">
+                            Tanto el Admin como el Ayudante tienen acceso a un **panel actualizado automáticamente** que
+                            refleja el historial de transacciones verificadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flujo" class="py-24 bg-primary-blue-darkest text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold sm:text-4xl text-white">
+                        El Flujo que Elimina la Duda y el Fraude
+                    </h2>
+                    <p class="mt-4 text-xl max-w-3xl mx-auto text-primary-blue-light">
+                        Entiende en 3 pasos cómo VeryfyApp transforma un pago Yape en una **transacción 100%
+                        verificada** para el ayudante en tu LOCAL.
+                    </p>
+                </header>
+
+                <div class="grid md:grid-cols-12 gap-10 items-start">
+                    <div
+                        class="md:col-span-3 flex flex-col space-y-8 p-4 bg-primary-blue-darkest rounded-xl shadow-2xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary-blue-light">Proceso de Verificación</h3>
+                        <button data-step="1"
+                            class="step-nav flex items-center space-x-3 text-left p-3 rounded-lg bg-primary-blue text-white transition hover:bg-primary-blue-dark">
+                            <span
+                                class="flow-step-dot w-6 h-6 flex items-center justify-center rounded-full text-sm font-bold bg-white text-primary-blue-dark">1</span>
+                            <span class="font-semibold">Captura del Pago (Admin)</span>
+                        </button>
+                        <button data-step="2"
+                            class="step-nav flex items-center space-x-3 text-left p-3 rounded-lg text-primary-blue-light transition hover:bg-primary-blue-dark hover:text-white">
+                            <span
+                                class="flow-step-dot w-6 h-6 flex items-center justify-center rounded-full text-sm font-bold border-2 border-primary-blue-light">2</span>
+                            <span class="font-semibold">Alerta en Tiempo Real (Ayudante)</span>
+                        </button>
+                        <button data-step="3"
+                            class="step-nav flex items-center space-x-3 text-left p-3 rounded-lg text-primary-blue-light transition hover:bg-primary-blue-dark hover:text-white">
+                            <span
+                                class="flow-step-dot w-6 h-6 flex items-center justify-center rounded-full text-sm font-bold border-2 border-primary-blue-light">3</span>
+                            <span class="font-semibold">Confirmación Final en Panel</span>
+                        </button>
+                    </div>
+
+                    <div class="md:col-span-9 bg-primary-blue-darkest p-8 rounded-xl shadow-2xl">
+                        <h3 id="step-title" class="text-3xl font-bold mb-4 text-white">1. Captura del Pago (Rol Admin)
+                        </h3>
+                        <p id="step-detail" class="text-lg text-primary-blue-light mb-6">
+                            El administrador instala la aplicación en el teléfono que recibe el Yape para
+                            capturar las notificaciones. Se crea un registro de pago en nuestra base de datos en menos
+                            de un segundo.
+                        </p>
+                        <div id="step-visual"
+                            class="p-6 bg-primary-blue-darkest rounded-lg border-2 border-primary-blue-dark min-h-[150px] flex items-center justify-center">
+                            <p class="text-2xl font-semibold text-white">📱 Admin: Captura la notificación oficial de
+                                Yape y la encripta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="app-screens" class="py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        VeryfyApp en Acción: Tu Negocio Bajo Control
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                        Visualiza la simplicidad y el poder de nuestra interfaz. Diseñada para que tú y tu equipo
+                        trabajen con total confianza.
+                    </p>
+                </header>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Panel del Administrador</h3>
+                        <img src="Image 1" alt="Captura de pantalla: Panel del Administrador" class="app-screenshot">
+                        <p class="mt-4 text-gray-600 text-sm">Gestiona todas las transacciones desde una vista clara.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Configuración de Ayudantes</h3>
+                        <img src="Image 2" alt="Captura de pantalla: Configuración de Ayudantes" class="app-screenshot">
+                        <p class="mt-4 text-gray-600 text-sm">Registra y administra los números de tu equipo fácilmente.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Panel del Ayudante</h3>
+                        <img src="Image 3" alt="Captura de pantalla: Panel del Ayudante" class="app-screenshot">
+                        <p class="mt-4 text-gray-600 text-sm">Confirmación instantánea de pagos para una venta segura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-24 bg-gray-100">
+            <div
+                class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-primary-blue-bg p-10 rounded-2xl shadow-xl">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+                    Comienza Hoy a Proteger tu Capital
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Deja de perder dinero por fraudes de pago y dale a tu equipo la herramienta que necesitan para
+                    confirmar ventas sin depender de ti.
+                </p>
+                <a href="#"
+                    class="px-10 py-4 text-xl font-bold text-white bg-success-green rounded-xl hover:bg-green-600 transition shadow-lg transform hover:scale-[1.03] inline-block">
+                    Solicitar Demo GRATIS
+                </a>
+                <p class="mt-4 text-sm text-gray-500">
+                    <span class="font-semibold text-primary-blue-dark">¡Pronto disponible en Google Play Store!</span>
+                </p>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block mt-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Descarga en Google Play" class="h-16">
+                </a>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Preguntas Frecuentes (FAQ)
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Resolvemos tus dudas sobre VeryfyApp
+                    </p>
+                </header>
+
+                <div class="space-y-6">
+                    <div class="faq-item bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer">
+                        <div class="faq-question p-6 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-3xl text-primary-blue">❓</span>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    ¿Qué problema resuelve VeryfyApp?
+                                </h3>
+                            </div>
+                            <svg class="faq-icon w-6 h-6 text-primary-blue transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-gray-600 pl-8 pb-6">
+                                VeryfyApp verifica los pagos realizados a través de Yape en tiempo real, ayudándote a
+                                prevenir fraudes por capturas de pantalla falsas y errores humanos. Protege tu caja y da
+                                tranquilidad a tu equipo de trabajo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="faq-item bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer is-open">
+                        <div class="faq-question p-6 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-3xl text-primary-blue">⚙️</span>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    ¿Cómo funciona VeryfyApp?
+                                </h3>
+                            </div>
+                            <svg class="faq-icon w-6 h-6 text-primary-blue transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer overflow-hidden transition-all duration-300">
+                            <p class="text-gray-600 pl-8 pb-6">
+                                El administrador instala la app en el teléfono que recibe los pagos Yape. Cuando llega
+                                una
+                                notificación de pago, VeryfyApp la captura, la verifica y envía automáticamente una
+                                notificación de confirmación a todos los ayudantes registrados. Además, todos pueden
+                                consultar el panel de pagos en tiempo real.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer">
+                        <div class="faq-question p-6 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-3xl text-primary-blue">📱</span>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    ¿Puedo instalarla en un iPhone?
+                                </h3>
+                            </div>
+                            <svg class="faq-icon w-6 h-6 text-primary-blue transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-gray-600 pl-8 pb-6">
+                                Actualmente, VeryfyApp es exclusiva para dispositivos Android 5.0 o superior. Estamos
+                                trabajando para ofrecer compatibilidad con iOS en el futuro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer">
+                        <div class="faq-question p-6 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-3xl text-primary-blue">👥</span>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    ¿Cuántos ayudantes puedo registrar?
+                                </h3>
+                            </div>
+                            <svg class="faq-icon w-6 h-6 text-primary-blue transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-gray-600 pl-8 pb-6">
+                                Puedes registrar múltiples números de teléfono de ayudantes. Cada uno recibirá
+                                notificaciones instantáneas cuando se confirme un pago y tendrá acceso al panel de pagos
+                                para verificar las transacciones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer">
+                        <div class="faq-question p-6 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-3xl text-primary-blue">🔒</span>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    ¿Es segura mi información?
+                                </h3>
+                            </div>
+                            <svg class="faq-icon w-6 h-6 text-primary-blue transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-gray-600 pl-8 pb-6">
+                                Sí, toda la información de pagos se encripta y se almacena de forma segura en nuestra
+                                base
+                                de datos. Solo tú y tu equipo autorizado tienen acceso a los datos de tus transacciones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer">
+                        <div class="faq-question p-6 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-3xl text-primary-blue">💰</span>
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    ¿Cuánto cuesta VeryfyApp?
+                                </h3>
+                            </div>
+                            <svg class="faq-icon w-6 h-6 text-primary-blue transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-gray-600 pl-8 pb-6">
+                                Ofrecemos diferentes planes adaptados a las necesidades de tu negocio. Contáctanos para
+                                conocer nuestras opciones de suscripción y encontrar el plan perfecto para ti. ¡Incluye
+                                período de prueba gratuito!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-lg text-gray-600 mb-4">¿Tienes más preguntas?</p>
+                    <a href="#contacto"
+                        class="inline-block px-8 py-3 text-lg font-semibold text-primary-blue bg-white border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition shadow-md">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="bg-gray-800 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">VeryfyApp</h4>
+                    <p class="text-sm text-gray-400">Verifica tus pagos en tiempo real. Cero Fraude.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#caracteristicas" class="text-gray-400 hover:text-white">Beneficios</a></li>
+                        <li><a href="#flujo" class="text-gray-400 hover:text-white">Cómo Funciona</a></li>
+                        <li><a href="#app-screens" class="text-gray-400 hover:text-white">App en Acción</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="seguridad/terminos_de_servicio.html"
+                                class="text-gray-400 hover:text-white">Términos de Servicio</a></li>
+                        <li><a href="seguridad/politica_de_privacidad.html"
+                                class="text-gray-400 hover:text-white">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Contacto</h4>
+                    <p class="text-sm text-gray-400">hola@veryfyapp.com</p>
+                    <div class="flex space-x-4 mt-3">
+                        <span class="text-xl text-gray-400 hover:text-white cursor-pointer">&#128241;</span>
+                        <span class="text-xl text-gray-400 hover:text-white cursor-pointer">&#128231;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center">
+                <p class="text-sm text-gray-500">&copy; 2025 VeryfyApp. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>

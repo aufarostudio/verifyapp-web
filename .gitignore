@@ -1,0 +1,32 @@
+# Dependency directories
+/node_modules
+/vendor
+
+# Build artifacts
+/dist
+/build
+/out
+/public/build # if using a build process that outputs to public
+
+# Environment variables
+.env
+.env.*.local
+
+# VS Code specific files
+.vscode/settings.json # Personal settings, can be ignored if not shared
+.vscode/tasks.json # Build/task configurations, can be ignored if not shared
+.vscode/launch.json # Debug configurations, can be ignored if not shared
+.vscode/extensions.json # Recommended extensions, can be ignored if not shared
+*.code-workspace # VS Code workspace file
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+temp/
+
+# OS generated files
+.DS_Store # macOS
+Thumbs.db # Windows

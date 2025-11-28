@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Servicio | VeryfyApp</title>
+    <!-- Carga del CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Eliminamos la configuración de colores para asegurar solo blanco y negro
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Fuente básica
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos generales: alto contraste y sin suavidad */
+        body {
+            line-height: 1.5;
+            /* Line-height ajustado para un aspecto más denso */
+            color: #000;
+            /* Texto en negro puro */
+            background-color: #fff;
+            /* Fondo en blanco puro */
+        }
+
+        h1 {
+            /* Línea divisoria en negro gruesa y sin relleno */
+            border-bottom: 5px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            /* Borde lateral en negro muy grueso y sin suavidad */
+            border-left: 8px solid #000;
+            padding-left: 1rem;
+        }
+
+        ul {
+            list-style-type: square;
+            /* Cambiamos a cuadrado para más aspereza */
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilo para las secciones críticas (alto contraste y sin redondez) */
+        .critical-section {
+            background-color: #f3f4f6;
+            /* Fondo gris claro */
+            border: 3px solid #000;
+            /* Borde negro sólido para ser jarring */
+            color: #000;
+            padding: 1rem;
+            margin-top: 1rem;
+            /* Eliminar rounded-lg/xl */
+        }
+
+        .prohibited-list li {
+            font-weight: bold;
+            /* Hacer la lista de prohibiciones más pesada */
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- Contenedor principal: sin sombras ni esquinas redondeadas, con un borde grueso y negro -->
+    <div class="max-w-4xl mx-auto p-10 bg-white my-10">
+
+        <h1 class="text-4xl font-extrabold text-black pb-4 mb-8">TÉRMINOS DE SERVICIO</h1>
+        <p class="text-sm text-gray-700 mb-6">Última actualización: 05 de Setiembre de 2025</p>
+
+        <p class="mb-8 text-lg">
+            Bienvenido/a a <strong class="text-black">VeryfyApp</strong> (en adelante, "la Aplicación" o "El Servicio").
+            Al acceder y utilizar nuestra Aplicación, usted ("el Usuario") acepta estar legalmente sujeto a los
+            siguientes Términos de Servicio. Lea <strong class="underline">atentamente</strong> estos términos antes de
+            usar El Servicio.
+        </p>
+
+        <!-- 1. OBJETO DEL SERVICIO -->
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4">1. OBJETO DEL SERVICIO</h2>
+        <p class="mb-4">
+            VeryfyApp es una aplicación móvil diseñada para dispositivos Android cuyo objetivo principal es la <strong
+                class="text-black">verificación automatizada de pagos realizados a través de la aplicación Yape</strong>
+            mediante la escucha y procesamiento de las notificaciones push oficiales recibidas en el dispositivo
+            Administrador. El Servicio notifica a los usuarios autorizados ("Ayudantes") sobre la confirmación de dichas
+            transacciones, proporcionando un control de caja centralizado.
+        </p>
+
+        <!-- 2. ACEPTACIÓN DE LOS TÉRMINOS -->
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4">2. ACEPTACIÓN DE LOS TÉRMINOS</h2>
+        <p class="mb-4">
+            Al instalar, acceder o utilizar el Servicio, usted reconoce que ha leído, entendido y aceptado estos
+            Términos, incluyendo la Política de Privacidad de VeryfyApp, que forma parte integral de este acuerdo. Si
+            <strong class="underline">no</strong> está de acuerdo con alguno de estos términos, no debe utilizar la
+            Aplicación y debe desinstalarla inmediatamente.
+        </p>
+
+        <!-- 3. RIESGOS, LIMITACIÓN Y CONTINUIDAD DEL SERVICIO -->
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4">3. RIESGOS, LIMITACIÓN Y CONTINUIDAD DEL SERVICIO</h2>
+        <p class="mb-4">
+            El Usuario reconoce y acepta que el funcionamiento principal de VeryfyApp depende de factores externos sobre
+            los cuales <strong class="font-extrabold">no</strong> tenemos control directo:
+        </p>
+
+        <h3 class="text-xl font-semibold text-black mt-6 mb-3">3.1. Dependencia de Terceros (Yape)</h3>
+        <p class="mb-4">
+            El Servicio depende exclusivamente del formato, contenido y la emisión de las notificaciones push por parte
+            de la aplicación Yape y de los permisos del Sistema Operativo Android.
+        </p>
+        <ul class="list-disc ml-6 space-y-2">
+            <li>
+                <strong>Cambios en Yape:</strong> Si Yape cambia su formato de notificación, protocolo de comunicación,
+                estructura de mensajes o cualquier otro elemento que impida a VeryfyApp identificar o procesar
+                correctamente los pagos, el Servicio de verificación podría interrumpirse o funcionar de manera errónea.
+            </li>
+            <li class="">
+                <strong class="font-extrabold">Período de Adaptación y No Reembolso:</strong> En caso de que se produzca
+                una interrupción del servicio debido a cambios implementados por Yape o el sistema operativo Android,
+                <strong class="font-extrabold">VeryfyApp se compromete a realizar los ajustes y
+                    actualizaciones necesarios en un plazo de treinta (30) días hábiles</strong> a partir de la
+                detección oficial del fallo. <strong class="font-extrabold">Durante este período de
+                    adaptación, no se emitirá ningún reembolso</strong> de las tarifas de suscripción o de uso, ya que
+                la falla se debe a una acción de un tercero ajeno a nuestra voluntad.
+            </li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-black mt-6 mb-3">3.2. Exención por Hardware, Software y Configuración</h3>
+        <p class="mb-4">
+            VeryfyApp no se hace responsable ni garantiza el funcionamiento del Servicio si la interrupción o el mal
+            funcionamiento se debe a:
+        </p>
+        <ol class="list-decimal ml-6 space-y-2">
+            <li>
+                <strong>Problemas de Hardware:</strong> Fallas o limitaciones del dispositivo móvil del Administrador
+                (batería, almacenamiento, antigüedad, etc.).
+            </li>
+            <li>
+                <strong>Configuración del Sistema Operativo:</strong> Si el Usuario revoca los permisos esenciales (como
+                el Acceso a Notificaciones) o si el sistema operativo (por ejemplo, Android, MIUI, HarmonyOS) interfiere
+                con la capacidad de VeryfyApp para ejecutarse en segundo plano (optimización de batería agresiva, cierre
+                forzado de apps).
+            </li>
+            <li>
+                <strong>Conexión a Internet:</strong> Interrupciones o baja calidad de la conexión a Internet o de la
+                red móvil del dispositivo Administrador o Ayudante.
+            </li>
+        </ol>
+
+        <!-- 4. USO PROHIBIDO Y ACCIONES LEGALES -->
+        <h2 class="text-2xl font-bold text-black mt-10 mb-4">4. USO PROHIBIDO Y ACCIONES LEGALES</h2>
+
+        <h3 class="text-xl font-semibold text-black mt-6 mb-3">4.1. Uso Malicioso y Ética</h3>
+        <p class="mb-4">
+            El Usuario se compromete a utilizar VeryfyApp de manera lícita, ética y únicamente para el propósito
+            comercial y de seguridad para el que fue diseñada.
+        </p>
+
+        <h3 class="text-xl font-semibold text-black mt-6 mb-3">4.2. Manipulación</h3>
+        <p class="mb-4">
+            Queda estrictamente prohibido intentar, facilitar o
+            realizar cualquier forma de ingeniería inversa, descompilación, desmontaje, o intentar derivar el código
+            fuente, algoritmos subyacentes o la estructura de VeryfyApp, incluyendo, pero no limitado a:
+        </p>
+        <ul class="space-y-2">
+            <li>
+                Ingeniería Inversa para Fines Maliciosos: Descubrir cómo se procesan las notificaciones de Yape para
+                replicar o burlar el sistema de verificación, o para obtener acceso no autorizado a los datos de otros
+                usuarios.
+            </li>
+            <li>
+                Creación de Versiones Fraudulentas: Crear versiones modificadas o clonadas de la Aplicación para
+                distribuirlas o utilizarlas con fines fraudulentos.
+            </li>
+            <li>
+                Interferencia: Intentar interferir o perturbar la integridad o el rendimiento del Servicio o los datos
+                contenidos en él.
+            </li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-black mt-6 mb-3">4.3. Consecuencias Legales</h3>
+        <p class="mb-4">
+            En caso de que VeryfyApp detecte o tenga sospechas fundadas de mal uso, ingeniería inversa, manipulación o
+            cualquier actividad que tenga como fin dañar a la empresa, a otros usuarios o al ecosistema de Yape,
+            VeryfyApp se reserva el derecho de tomar acciones legales inmediatas y
+            exhaustivas contra el Usuario infractor, incluyendo, pero no limitado a, la cancelación de la
+            cuenta sin reembolso y la reclamación de daños y perjuicios por el máximo permitido por la ley.
+        </p>
+
+        <!-- 5. PERMISOS Y REQUISITOS TÉCNICOS -->
+        <h2 class="text-2xl font-bold text-black mt-10 mb-4">5. PERMISOS Y REQUISITOS TÉCNICOS</h2>
+        <p class="mb-4">
+            El Usuario Administrador debe otorgar los siguientes permisos críticos para el correcto funcionamiento de la
+            Aplicación, reconociendo el propósito de cada uno:
+        </p>
+        <ul class="list-disc ml-6 space-y-2 p-4">
+            <li>
+                <strong class="font-extrabold">BIND_NOTIFICATION_LISTENER_SERVICE (Acceso a Notificaciones):</strong>
+                Permite a VeryfyApp escuchar las notificaciones. Este permiso es indispensable para interceptar y
+                procesar los pagos de Yape.
+            </li>
+            <li>
+                <strong class="font-extrabold">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS:</strong> Permite a VeryfyApp evitar
+                que el sistema operativo la cierre automáticamente para ahorrar batería, garantizando la verificación en
+                tiempo real.
+            </li>
+            <li>
+                <strong class="font-extrabold">WAKE_LOCK:</strong> Mantiene la CPU despierta temporalmente durante
+                operaciones críticas (como el registro de un pago) para evitar la pérdida de datos.
+            </li>
+            <li>
+                <strong class="font-extrabold">RECEIVE_BOOT_COMPLETED:</strong> Permite a VeryfyApp reiniciarse
+                automáticamente después de que el dispositivo Administrador se encienda, asegurando la continuidad del
+                servicio.
+            </li>
+            <li>
+                <strong class="font-extrabold">POST_NOTIFICATIONS:</strong> Permite a VeryfyApp notificar a los
+                Ayudantes sobre la confirmación de pagos.
+            </li>
+        </ul>
+
+        <!-- 6. MODIFICACIONES DE LOS TÉRMINOS -->
+        <h2 class="text-2xl font-bold text-black mt-10 mb-4">6. MODIFICACIONES DE LOS TÉRMINOS</h2>
+        <p class="mb-4">
+            Nos reservamos el derecho de modificar o reemplazar estos Términos en cualquier momento. Si la modificación
+            es sustancial, haremos esfuerzos razonables para proporcionar un aviso de al menos 30 días antes de que los
+            nuevos términos entren en vigor. El uso continuado del Servicio después de la entrada en vigor de dichas
+            revisiones constituye la aceptación de los términos modificados.
+        </p>
+
+        <!-- 7. LEY APLICABLE Y JURISDICCIÓN -->
+        <h2 class="text-2xl font-bold text-black mt-10 mb-4">7. LEY APLICABLE Y JURISDICCIÓN</h2>
+        <p class="mb-4">
+            Estos Términos se regirán e interpretarán de acuerdo con las leyes del Perú. Cualquier disputa que surja en
+            relación con estos Términos será sometida a la jurisdicción exclusiva de los tribunales de Lima, Perú.
+        </p>
+
+        <div class="mt-12 pt-6 border-t border-black text-center text-sm text-black">
+            <p>&copy; 2025 VeryfyApp. Todos los derechos reservados.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

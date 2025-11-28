@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | VeryfyApp</title>
+    <!-- Carga del CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos generales para legibilidad */
+        body {
+            line-height: 1.6;
+            color: #1f2937;
+            /* gray-800 */
+        }
+
+        h1 {
+            /* Línea divisoria en negro */
+            border-bottom: 3px solid #111827;
+            /* gray-900 */
+        }
+
+        h2 {
+            /* Borde lateral en negro */
+            border-left: 4px solid #111827;
+            padding-left: 1rem;
+        }
+
+        ul,
+        ol {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        /* Estilo para las secciones de seguridad/tecnología y críticas */
+        .highlight-section {
+            background-color: #f3f4f6;
+            /* gray-100 */
+            border: 1px solid #9ca3af;
+            /* gray-400 */
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <div class="max-w-4xl mx-auto p-10 bg-white my-10">
+
+        <h1 class="text-4xl font-extrabold text-gray-900 pb-4 mb-8">POLÍTICA DE PRIVACIDAD</h1>
+        <p class="text-sm text-gray-500 mb-6">Última actualización: 05 de Setiembre de 2025</p>
+
+        <p class="mb-8 text-lg">
+            <strong class="font-bold text-gray-900">VeryfyApp</strong> ("Nosotros", "Nuestro", "La Compañía") se
+            compromete firmemente a proteger su privacidad y la confidencialidad de sus datos comerciales. Esta Política
+            de Privacidad ha sido diseñada para describir de manera clara, transparente y detallada cómo recopilamos,
+            cómo utilizamos y cómo salvaguardamos la información cuando usted hace uso de nuestra innovadora aplicación
+            móvil. Su confianza es fundamental para nosotros, y por ello, mantenemos un estándar de seguridad riguroso
+            en todo momento.
+        </p>
+
+        <!-- 1. PRINCIPIOS Y COMPROMISO DE PRIVACIDAD -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. PRINCIPIOS Y COMPROMISO DE PRIVACIDAD</h2>
+        <p class="mb-4">
+            Nuestro principio fundamental en el manejo de datos es la <strong
+                class="font-bold text-gray-900">recopilación mínima y el propósito específico</strong>. Esto significa
+            que solo procesamos y almacenamos la información que es estrictamente indispensable para dos objetivos
+            esenciales: confirmar la autenticidad de sus transacciones y garantizar el funcionamiento ininterrumpido y
+            seguro de nuestro Servicio de verificación. Nuestro compromiso con usted es total: <strong
+                class="font-extrabold text-gray-900">Nunca solicitaremos, accederemos ni almacenaremos información
+                sensible</strong> como claves de seguridad, contraseñas, saldos bancarios, o cualquier otro dato
+            personal no directamente relacionado con la verificación de pagos.
+        </p>
+
+        <!-- 2. INFORMACIÓN QUE RECOPILAMOS Y SU ORIGEN -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. INFORMACIÓN QUE RECOPILAMOS Y SU ORIGEN</h2>
+        <p class="mb-4">
+            Para poder ofrecerle el servicio de verificación de pagos en tiempo real, es necesario recopilar de forma
+            segura dos tipos de información a través de la Aplicación:
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">2.1. Información Proporcionada por el Usuario (Datos
+            de Cuenta)</h3>
+        <p class="mb-2">
+            Esta información se registra de forma manual y segura por el Administrador al configurar la cuenta y al dar
+            acceso a su equipo de trabajo. Estos datos son necesarios para la identificación dentro del sistema de
+            gestión de equipo:
+        </p>
+        <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Datos de Contacto:</strong> Incluye el número de teléfono del Administrador, el nombre de
+                usuario y, opcionalmente, una dirección de correo electrónico.</li>
+            <li><strong>Credenciales de Equipo:</strong> Se utilizan identificadores únicos o códigos de registro para
+                asociar correctamente la cuenta de cada Ayudante con el Administrador principal.</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">2.2. Información Procesada Automáticamente (Datos de
+            Transacción)</h3>
+
+        <h4 class="text-lg font-bold text-gray-800 mt-4 mb-2">A. Datos Críticos de Notificación (Capturados mediante
+            BIND_NOTIFICATION_LISTENER_SERVICE)</h4>
+        <p class="mb-2">
+            Al activar el permiso crítico de "Acceso a Notificaciones" en el dispositivo Administrador, VeryfyApp
+            utiliza su lógica de procesamiento avanzado para aislar y procesar los siguientes datos <strong
+                class="font-bold text-gray-900">exclusivamente de las notificaciones de pago de Yape</strong>:
+        </p>
+        <ol class="list-decimal ml-6 space-y-1">
+            <li><strong>Monto de la Transacción.</strong></li>
+            <li><strong>Nombre del Remitente</strong> (tal como aparece en la notificación de Yape).</li>
+            <li><strong>Fecha y Hora</strong> de la notificación.</li>
+        </ol>
+        <p class="mt-4 p-3 text-sm text-gray-800">
+            <strong>LIMITACIÓN CRÍTICA EXPLICADA:</strong> La aplicación ha sido diseñada con filtros estrictos para
+            procesar y almacenar <strong class="font-extrabold">solo</strong> las notificaciones que cumplen con el
+            patrón específico de un pago de Yape. No procesamos, no almacenamos y no tenemos acceso al contenido de
+            notificaciones de otras aplicaciones.
+        </p>
+
+        <h4 class="text-lg font-bold text-gray-800 mt-6 mb-2">B. Datos Técnicos y de Funcionamiento</h4>
+        <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Identificadores de Dispositivo:</strong> Token de registro de Firebase (FCM) necesario para
+                enviar alertas de confirmación a los Ayudantes.</li>
+            <li><strong>Estado del Dispositivo:</strong> Versión del Sistema Operativo Android y estado de la
+                Optimización de Batería.</li>
+        </ul>
+
+        <!-- 3. USO DETALLADO DE LA INFORMACIÓN -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. USO DETALLADO DE LA INFORMACIÓN</h2>
+        <p class="mb-4">
+            La información que recopilamos se utiliza de manera exclusiva y rigurosa para los propósitos empresariales
+            descritos a continuación:
+        </p>
+        <ul class="list-disc ml-6 space-y-2">
+            <li><strong>Verificación de Pagos (Propósito Central):</strong> Procesar y cotejar la información para
+                confirmar la autenticidad del pago de Yape.</li>
+            <li><strong>Notificación a Usuarios en Tiempo Real:</strong> Enviar instantáneamente notificaciones push a
+                los Ayudantes.</li>
+            <li><strong>Gestión de Cuentas y Trazabilidad:</strong> Mantener un panel de pagos y un historial de
+                transacciones que se actualiza automáticamente.</li>
+            <li><strong>Mejora Continua y Soporte:</strong> Analizar los datos técnicos y de funcionamiento (no los
+                datos transaccionales de Yape) para mejorar el rendimiento y solucionar fallos.</li>
+        </ul>
+
+        <!-- 4. DIVULGACIÓN Y COMPARTICIÓN DE INFORMACIÓN -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. DIVULGACIÓN Y COMPARTICIÓN DE INFORMACIÓN</h2>
+        <p class="mb-4">
+            Su información personal y de transacciones es privada. No vendemos, no intercambiamos ni alquilamos su
+            información personal a terceros. Solo compartimos su información en las siguientes y muy específicas
+            circunstancias:
+        </p>
+        <ul class="list-disc ml-6 space-y-2">
+            <li><strong>Entre Usuarios del Mismo Equipo (Colaboración Funcional):</strong> La información de pago
+                verificada es compartida automáticamente entre el Administrador y los Ayudantes asociados a la misma
+                cuenta.</li>
+            <li><strong>Proveedores de Servicios (Tecnología de Entrega):</strong> Compartimos datos técnicos mínimos
+                (como el token FCM) con servicios de terceros de confianza (como Firebase) necesarios para el envío de
+                notificaciones.</li>
+            <li><strong>Requisitos Legales:</strong> Si la ley o una orden judicial legalmente válida lo exige, podemos
+                divulgar la información estrictamente necesaria.</li>
+        </ul>
+
+        <!-- 5. SEGURIDAD Y RESPALDO TECNOLÓGICO -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">5. SEGURIDAD Y RESPALDO TECNOLÓGICO</h2>
+        <div class="p-5 mb-6">
+            <p class="mb-4">
+                En VeryfyApp, la seguridad de sus datos es nuestra máxima prioridad. Hemos implementado una
+                infraestructura robusta y escalable utilizando tecnologías de vanguardia y servicios de empresas líderes
+                en la industria para garantizar la protección, disponibilidad e integridad de la información de sus
+                transacciones. <strong class="font-extrabold text-gray-900">Sus datos están bien respaldados y
+                    protegidos.</strong>
+            </p>
+            <h3 class="text-xl font-semibold text-gray-900 mt-4 mb-3">5.1. Infraestructura de Confianza y Socios
+                Tecnológicos</h3>
+            <p class="mb-2">
+                Nuestros servicios están ligados a empresas de renombre internacional, lo que asegura que su información
+                está protegida por plataformas con altos estándares de seguridad y cumplimiento normativo:
+            </p>
+            <ul class="list-disc ml-6 space-y-2">
+                <li>
+                    <strong>Supabase:</strong> Utilizamos Supabase como nuestra plataforma principal de base de datos
+                    para la gestión y almacenamiento seguro de los registros de transacciones. Nos proporciona un
+                    respaldo robusto, escalabilidad de nivel empresarial y gestión de acceso segura.
+                </li>
+                <li>
+                    <strong>Edge Functions:</strong> Para el procesamiento rápido y eficiente de la lógica de
+                    verificación de pagos, empleamos Edge Functions. Estas funciones sin servidor minimizan la latencia
+                    y aseguran que los datos críticos sean procesados en entornos aislados y seguros.
+                </li>
+                <li>
+                    <strong>Firebase (FCM) de Google:</strong> Utilizamos Firebase Cloud Messaging (FCM), un servicio de
+                    Google, para la entrega confiable y segura de las alertas de confirmación a los Ayudantes. Esto
+                    garantiza notificaciones instantáneas a través de una plataforma segura.
+                </li>
+            </ul>
+        </div>
+
+        <!-- 6. PERMISOS DE ANDROID REQUERIDOS -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">6. PERMISOS DE ANDROID REQUERIDOS</h2>
+        <p class="mb-4">
+            VeryfyApp requiere permisos elevados para funcionar correctamente en un entorno comercial. Al concederlos,
+            usted consiente el procesamiento de su información como se describe:
+        </p>
+
+        <div class="">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr class="bg-gray-800 text-white">
+                        <th class="py-3 px-4 text-left font-semibold">Permiso</th>
+                        <th class="py-3 px-4 text-left font-semibold">Propósito</th>
+                        <th class="py-3 px-4 text-left font-semibold">Implicación de Privacidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="py-3 px-4 font-mono">BIND_NOTIFICATION_LISTENER_SERVICE</td>
+                        <td class="py-3 px-4">Permite interceptar notificaciones.</td>
+                        <td class="py-3 px-4">Usado únicamente para leer notificaciones de Yape y extraer datos de pago.
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="py-3 px-4 font-mono">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td>
+                        <td class="py-3 px-4">Evita que el sistema operativo detenga el servicio.</td>
+                        <td class="py-3 px-4">Asegura que la verificación sea en tiempo real, incluso con la pantalla
+                            apagada.</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="py-3 px-4 font-mono">WAKE_LOCK</td>
+                        <td class="py-3 px-4">Mantiene el dispositivo activo durante la captura crítica.</td>
+                        <td class="py-3 px-4">Asegura la integridad del registro de pagos y evita la pérdida de datos.
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="py-3 px-4 font-mono">INTERNET / ACCESS_NETWORK_STATE</td>
+                        <td class="py-3 px-4">Conexión a nuestros servidores y envío de alertas.</td>
+                        <td class="py-3 px-4">Necesario para el intercambio de datos entre el Administrador y los
+                            Ayudantes en tiempo real.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 7. RETENCIÓN DE DATOS -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">7. RETENCIÓN DE DATOS</h2>
+        <p class="mb-4">
+            Retendremos la información de su cuenta y los registros de transacciones verificadas mientras su cuenta esté
+            activa o según sea necesario para cumplir con nuestras obligaciones legales, resolver disputas, prevenir
+            fraudes y hacer cumplir nuestros acuerdos.
+        </p>
+
+        <!-- 8. CAMBIOS A ESTA POLÍTICA -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">8. CAMBIOS A ESTA POLÍTICA</h2>
+        <p class="mb-4">
+            Podemos actualizar nuestra Política de Privacidad de vez en cuando para reflejar cambios en nuestras
+            prácticas o requerimientos legales. Le notificaremos cualquier cambio sustancial publicando la nueva
+            Política de Privacidad en esta página con una nueva fecha de "Última actualización" y, si los cambios son
+            críticos, mediante una notificación clara dentro de la Aplicación.
+        </p>
+
+        <div class="mt-12 pt-6 border-t border-gray-400 text-center text-sm text-gray-600">
+            <p>&copy; 2025 VeryfyApp. Todos los derechos reservados.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
