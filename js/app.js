@@ -23,6 +23,46 @@ function initApp() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
 
+
+
+    //planes y presios
+    const toggle = document.getElementById('billingToggle');
+    const dot = document.getElementById('toggleDot');
+    const prices = document.querySelectorAll('[data-price-m]');
+    const labelMensual = document.getElementById('label-mensual');
+    const labelAnual = document.getElementById('label-anual');
+
+    let annual = false;
+
+    toggle.addEventListener('click', () => {
+        annual = !annual;
+
+        toggle.classList.toggle('bg-primary-blue');
+        dot.classList.toggle('translate-x-7');
+
+        labelMensual.classList.toggle('text-primary-blue');
+        labelMensual.classList.toggle('text-gray-500');
+
+        labelAnual.classList.toggle('text-primary-blue');
+        labelAnual.classList.toggle('text-gray-500');
+
+        prices.forEach(price => {
+            const period = price.parentElement.querySelector('.price-period');
+            const original = price.closest('.mb-6').querySelector('.price-original');
+
+            if (annual) {
+                price.textContent = `S/ ${price.dataset.priceA}`;
+                period.textContent = price.dataset.periodA;
+                original.classList.remove('hidden');
+            } else {
+                price.textContent = `S/ ${price.dataset.priceM}`;
+                period.textContent = price.dataset.periodM;
+                original.classList.add('hidden');
+            }
+        });
+    });
+
+
     menuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });

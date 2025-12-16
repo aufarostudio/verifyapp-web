@@ -19,6 +19,8 @@
                         'primary-blue-light': '#69A5E0', // Light text/border/footer links
                         'primary-blue-bg': '#E8F2FA', // Lightest background
                         'success-green': '#10B981', // Green-500 equivalent, keeping for CTA
+                        'whatsapp': '#25D366',
+                        'whatsapp-dark': '#128C7E',
                     }
                 }
             }
@@ -41,10 +43,12 @@
                         class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Beneficios</a>
                     <a href="#flujo" class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo
                         Funciona</a>
-                    <a href="#app-screens"
-                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">App en Acción</a>
-                    <a href="#tester"
-                        class="text-sm font-medium text-white bg-primary-blue px-4 py-2 rounded-lg hover:bg-primary-blue-dark transition shadow-md">Unirme al grupo</a>
+                    <a href="#planes"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Planes</a>
+                    <a href="https://wa.me/51907796591?text=Hola,%20quiero%20probar%20VerifyApp%20gratis"
+                        target="_blank"
+                        class="text-sm font-medium text-white bg-whatsapp px-4 py-2 rounded-lg hover:bg-whatsapp-dark transition shadow-md">Probar
+                        gratis</a>
                 </nav>
                 <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg">
                     &#9776;
@@ -54,9 +58,10 @@
         <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2">
             <a href="#caracteristicas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Beneficios</a>
             <a href="#flujo" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo Funciona</a>
-            <a href="#app-screens" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">App en Acción</a>
-            <a href="#tester"
-                class="block px-4 py-2 text-sm text-white bg-primary-blue m-2 rounded-lg text-center">Unirme al grupo</a>
+            <a href="#planes" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Planes</a>
+            <a href="https://wa.me/51907796591?text=Hola,%20quiero%20probar%20VerifyApp%20gratis" target="_blank"
+                class="block px-4 py-2 text-sm text-white bg-whatsapp m-2 rounded-lg text-center">Probar
+                gratis</a>
         </div>
     </header>
 
@@ -72,10 +77,12 @@
                         caja y a tus ayudantes de errores y fraudes, incluso si no estás en el local.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#flujo"
-                            class="px-8 py-3 text-lg font-semibold text-primary-blue bg-white border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition shadow-md transform hover:scale-[1.02] text-center">
-                            Ver el Flujo de Trabajo
-                        </a>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-lg font-semibold text-primary-blue-dark">¡Pronto disponible en Google Play
+                                Store!</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Disponible en Google Play" class="h-16 w-auto -ml-3">
+                        </div>
                     </div>
                 </div>
                 <div class="order-1 md:order-2 relative flex justify-center">
@@ -199,19 +206,22 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
                     <div class="text-center">
                         <h3 class="text-xl font-bold text-gray-900 mb-4">Panel del Administrador</h3>
-                        <img src="img/admin-dashboard.png" alt="Captura de pantalla: Panel del Administrador" class="app-screenshot">
+                        <img src="img/admin-dashboard.png" alt="Captura de pantalla: Panel del Administrador"
+                            class="app-screenshot">
                         <p class="mt-4 text-gray-600 text-sm">Gestiona todas las transacciones desde una vista clara.
                         </p>
                     </div>
                     <div class="text-center">
                         <h3 class="text-xl font-bold text-gray-900 mb-4">Configuración de Ayudantes</h3>
-                        <img src="img/admin-config.png" alt="Captura de pantalla: Configuración de Ayudantes" class="app-screenshot">
+                        <img src="img/admin-config.png" alt="Captura de pantalla: Configuración de Ayudantes"
+                            class="app-screenshot">
                         <p class="mt-4 text-gray-600 text-sm">Registra y administra los números de tu equipo fácilmente.
                         </p>
                     </div>
                     <div class="text-center">
                         <h3 class="text-xl font-bold text-gray-900 mb-4">Panel del Ayudante</h3>
-                        <img src="img/ayudante-dashboard.png" alt="Captura de pantalla: Panel del Ayudante" class="app-screenshot">
+                        <img src="img/ayudante-dashboard.png" alt="Captura de pantalla: Panel del Ayudante"
+                            class="app-screenshot">
                         <p class="mt-4 text-gray-600 text-sm">Confirmación instantánea de pagos para una venta segura.
                         </p>
                     </div>
@@ -220,19 +230,158 @@
         </section>
 
 
+        <!-- PLANES Y PRECIOS -->
+        <section id="planes" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Header -->
+                <header class="text-center mb-14">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Planes que se adaptan a tu negocio
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                        Empieza gratis y escala según el tamaño de tu equipo y volumen de ventas.
+                    </p>
+
+                    <!-- Switch -->
+                    <div class="flex justify-center items-center gap-4 mt-8">
+                        <span id="label-mensual" class="font-semibold text-primary-blue">Mensual</span>
+
+                        <button id="billingToggle"
+                            class="relative w-14 h-7 bg-gray-300 rounded-full transition focus:outline-none">
+                            <span id="toggleDot"
+                                class="absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition"></span>
+                        </button>
+
+                        <span id="label-anual" class="font-semibold text-gray-500">
+                            Anual <span class="text-sm text-success-green">(3 meses gratis)</span>
+                        </span>
+                    </div>
+                </header>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <!-- ESENCIAL -->
+                    <div
+                        class="bg-gray-50 rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Plan Esencial</h3>
+                        <p class="text-gray-600 mb-6">Ideal para negocios pequeños</p>
+
+                        <div class="mb-6">
+                            <div class="flex items-end gap-2">
+                                <span class="text-4xl font-extrabold text-primary-blue" data-price-m="30"
+                                    data-price-a="270" data-period-m="/mes" data-period-a="/anual" data-original="360">
+                                    S/ 30
+                                </span>
+                                <span class="text-gray-500 price-period">/mes</span>
+                            </div>
+
+                            <div class="text-sm text-gray-400 mt-1 hidden price-original">
+                                <span class="line-through">S/ 360</span>
+                                <span class="ml-1">por año</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-gray-600 mb-8 flex-1">
+                            <li>✔ 3 días de prueba gratis</li>
+                            <li>✔ Transacciones ilimitadas</li>
+                            <li>✔ Panel web en tiempo real</li>
+                            <li>✔ Consulta por fechas</li>
+                            <li>✔ Hasta <b>2 ayudantes</b></li>
+                            <li>✔ Soporte 24/7</li>
+                        </ul>
+
+                        <a href="https://wa.me/51907796591?text=Hola,%20quiero%20probar%20VerifyApp%20Plan%20Esencial"
+                            target="_blank"
+                            class="text-center px-6 py-3 font-semibold text-white bg-primary-blue rounded-xl hover:bg-primary-blue-dark transition">
+                            Probar gratis
+                        </a>
+                    </div>
+
+                    <!-- PRO -->
+                    <div
+                        class="bg-primary-blue text-white rounded-2xl shadow-xl p-8 transform md:scale-105 flex flex-col relative">
+                        <span
+                            class="absolute top-4 right-4 bg-success-green text-white text-xs px-3 py-1 rounded-full font-semibold">
+                            Más elegido
+                        </span>
+
+                        <h3 class="text-xl font-bold mb-2">Pro</h3>
+                        <p class="text-primary-blue-bg mb-6">Control total y automatización</p>
+
+                        <div class="mb-6">
+                            <div class="flex items-end gap-2">
+                                <span class="text-4xl font-extrabold" data-price-m="55" data-price-a="495"
+                                    data-period-m="/mes" data-period-a="/anual" data-original="660">
+                                    S/ 55
+                                </span>
+                                <span class="text-gray-200 price-period">/mes</span>
+                            </div>
+
+                            <div class="text-sm text-primary-blue-bg mt-1 hidden price-original">
+                                <span class="line-through">S/ 660</span>
+                                <span class="ml-1">por año</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 flex-1">
+                            <li>✔ Todo el plan Esencial</li>
+                            <li>✔ Hasta <b>5 ayudantes</b></li>
+                            <li>✔ API <span
+                                    class="inline-block bg-gray-300 text-xs px-2 py-1 rounded-full text-gray-800">Beta</span>
+                            </li>
+                            <li>✔ Monitor web avanzado</li>
+                            <li>✔ Soporte 24/7</li>
+                        </ul>
+
+                        <a href="https://wa.me/51907796591?text=Hola,%20quiero%20información%20del%20Plan%20Pro"
+                            target="_blank"
+                            class="text-center px-6 py-3 font-semibold bg-white text-primary-blue rounded-xl hover:bg-gray-100 transition">
+                            Contactar ventas
+                        </a>
+                    </div>
+
+                    <!-- PERSONALIZADO -->
+                    <div
+                        class="bg-gray-50 rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">Para empresas y alto volumen</p>
+
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-gray-900">A medida</span>
+                        </div>
+
+                        <ul class="space-y-3 text-gray-600 mb-8 flex-1">
+                            <li>✔ Ayudantes ilimitados</li>
+                            <li>✔ API avanzada</li>
+                            <li>✔ Integraciones personalizadas</li>
+                            <li>✔ SLA garantizado</li>
+                            <li>✔ Soporte dedicado</li>
+                        </ul>
+
+                        <a href="https://wa.me/51907796591?text=Hola,%20quiero%20un%20plan%20personalizado"
+                            target="_blank"
+                            class="text-center px-6 py-3 font-semibold text-primary-blue border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition">
+                            Hablar con ventas
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script>
+
+        </script>
+
+
+
+
         <section id="tester" class="py-24 bg-gray-100">
             <div
                 class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-primary-blue-bg p-10 rounded-2xl shadow-xl">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
-                    Únete a nuestro programa de Testers y obtén beneficios
-                </h2>
-                <p class="text-xl text-gray-600 mb-8">
-                    Forma parte de nuestro grupo exclusivo de testers y obtén acceso anticipado a nuevas funciones de VerifyApp. Disfruta beneficios especiales mientras nos ayudas a asegurar la mejor experiencia posible.
-                </p>
-                <a href="https://chat.whatsapp.com/Gv1QpeHGrsmGagLs2sUtod"
-                    class="px-10 py-4 text-xl font-bold text-white bg-success-green rounded-xl hover:bg-green-600 transition shadow-lg transform hover:scale-[1.03] inline-block">
-                    Unirse a Programa de Testers
-                </a>
+
                 <p class="mt-4 text-sm text-gray-500">
                     <span class="font-semibold text-primary-blue-dark">¡Pronto disponible en Google Play Store!</span>
                 </p>
