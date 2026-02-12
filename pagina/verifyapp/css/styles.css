@@ -1,0 +1,62 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Custom Gradients */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #186ecc 0%, #0d4b91 100%);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #186ecc 0%, #0d4b91 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* FAQ Accordion Transitions */
+.faq-content {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.faq-content.open {
+    opacity: 1;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+#mobile-menu.open {
+    transform: translateY(0);
+}
+
+/* Feature Cards Hover */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

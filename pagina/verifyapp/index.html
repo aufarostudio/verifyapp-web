@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifyApp - Protege tu negocio de fraudes en Yape</title>
+    <meta name="description"
+        content="Verifica pagos de Yape en tiempo real y evita fraudes en tu negocio. La herramienta ideal para bodegas, restaurantes y tiendas en Perú.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN for landing) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#186ecc',
+                            dark: '#0d4b91',
+                        },
+                        secondary: '#742284', // Yape-like accent
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../img/favicon/favicon.ico">
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+
+
+    <!-- Hero Section -->
+    <header class="bg-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1
+                            class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl animate-fade-in">
+                            <span class="block xl:inline">Verifica pagos de Yape</span>
+                            <span class="block text-primary">en tiempo real</span>
+                        </h1>
+                        <p
+                            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 animate-fade-in delay-100">
+                            Evita fraudes y asegura que el dinero realmente llegó a tu cuenta. La herramienta esencial
+                            para bodegas, restaurantes y negocios con ayudantes.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start animate-fade-in delay-200">
+                            <div class="rounded-md shadow">
+                                <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark md:py-4 md:text-lg transition">
+                                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                    </svg>
+                                    Descargar en Google Play
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#como-funciona"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg transition">
+                                    Ver cómo funciona
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div
+            class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-50 flex items-center justify-center pt-10 lg:pt-0">
+            <!-- Video Placeholder / Image -->
+            <div class="w-full max-w-md px-4 sm:px-6 lg:px-0">
+                <div
+                    class="relative rounded-2xl shadow-2xl overflow-hidden border-4 border-white transform rotate-2 hover:rotate-0 transition duration-500">
+                    <!-- Embedded Video -->
+                    <div class="aspect-w-9 aspect-h-16 bg-black">
+                        <iframe class="w-full h-full min-h-[500px]" src="https://www.youtube.com/embed/F9Qv82cziMw"
+                            title="VerifyApp Video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problema Section -->
+    <section id="problema" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">El Problema</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    ¿Te ha pasado esto en tu negocio?
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    La informalidad y las prisas pueden costarte dinero.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div
+                        class="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        🚫
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Capturas Falsas</h3>
+                    <p class="text-gray-600">Clientes que muestran pantallazos editados o de fechas pasadas para
+                        intentar engañarte.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div
+                        class="w-14 h-14 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        🤔
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Dudas al Cobrar</h3>
+                    <p class="text-gray-600">Tus ayudantes no tienen acceso a tu celular y no saben si realmente llegó
+                        el dinero.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div
+                        class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        📉
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Descuadres de Caja</h3>
+                    <p class="text-gray-600">Al final del día falta dinero y no hay forma de saber qué cobro no ingresó.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solucion Section -->
+    <section id="solucion" class="py-16 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    La solución en 3 pasos simples
+                </h2>
+                <p class="mt-4 text-xl text-gray-500">
+                    VerifyApp protege tu dinero sin complicaciones.
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gray-100 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                    <div class="text-center bg-white">
+                        <div
+                            class="w-24 h-24 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold border-4 border-white shadow-lg">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Cliente Paga</h3>
+                        <p class="text-gray-600">El cliente realiza el Yape a tu número como siempre.</p>
+                    </div>
+                    <div class="text-center bg-white">
+                        <div
+                            class="w-24 h-24 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold border-4 border-white shadow-lg">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">VerifyApp Detecta</h3>
+                        <p class="text-gray-600">La app lee la notificación oficial y verifica que sea real.</p>
+                    </div>
+                    <div class="text-center bg-white">
+                        <div
+                            class="w-24 h-24 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold border-4 border-white shadow-lg">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Confirmación Inmediata</h3>
+                        <p class="text-gray-600">Tu equipo recibe una alerta de "PAGO CONFIRMADO" en sus celulares.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="py-16 bg-gradient-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold mb-6">¿Por qué elegir VerifyApp?</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div
+                                class="flex-shrink-0 h-8 w-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white font-bold mr-4">
+                                ✓</div>
+                            <div>
+                                <h4 class="text-xl font-bold">Evita Fraudes al 100%</h4>
+                                <p class="text-blue-100 mt-1">Dile adiós a las capturas falsas. Si VerifyApp no suena,
+                                    el dinero no llegó.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="flex-shrink-0 h-8 w-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white font-bold mr-4">
+                                ✓</div>
+                            <div>
+                                <h4 class="text-xl font-bold">Controla tus Ventas</h4>
+                                <p class="text-blue-100 mt-1">Historial detallado de cada ingreso por fecha y hora.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="flex-shrink-0 h-8 w-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white font-bold mr-4">
+                                ✓</div>
+                            <div>
+                                <h4 class="text-xl font-bold">Organiza a tu Equipo</h4>
+                                <p class="text-blue-100 mt-1">Tus ayudantes cobran con confianza sin molestarte para
+                                    confirmar.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <img src="../../img/mockup-movil.png" alt="App Screenshot"
+                        class="transform rotate-3 hover:rotate-0 transition duration-500 max-w-sm mx-auto drop-shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Detallado -->
+    <section id="como-funciona" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">¿Cómo se usa?</h2>
+                <p class="mt-4 text-xl text-gray-500">Roles diseñados para tu negocio</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Admin Role -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <span class="bg-blue-100 text-primary p-2 rounded-lg mr-3">👑</span>
+                        Modo Administrador
+                    </h3>
+                    <p class="text-gray-600 mb-6">Para el dueño del negocio o encargado de la cuenta bancaria.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">🔹 Instala la app en el celular que recibe los Yapes.</li>
+                        <li class="flex items-center">🔹 Crea una "Sala de Trabajo".</li>
+                        <li class="flex items-center">🔹 Comparte el código de acceso con tus ayudantes.</li>
+                        <li class="flex items-center">🔹 ¡Listo! La app notificará automáticamente.</li>
+                    </ul>
+                </div>
+
+                <!-- Helper Role -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-green-500">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <span class="bg-green-100 text-green-600 p-2 rounded-lg mr-3">👷</span>
+                        Modo Ayudante
+                    </h3>
+                    <p class="text-gray-600 mb-6">Para el personal que atiende al público.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">🔹 Instala la app en su propio celular.</li>
+                        <li class="flex items-center">🔹 Ingresa el código de la sala.</li>
+                        <li class="flex items-center">🔹 Recibe una notificación sonora y visual cada ver que pagan.
+                        </li>
+                        <li class="flex items-center">🔹 No necesita acceso a tu cuenta bancaria.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section id="planes" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Planes Transparentes</h2>
+                <p class="mt-4 text-xl text-gray-500">Empieza con nuestra prueba gratuita sin compromiso</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Esencial -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan Esencial</h3>
+                    <p class="text-gray-500 mb-4">Perfecto para empezar</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-gray-900">S/ 30</span>
+                        <span class="text-gray-500">/mes</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600">
+                        <li class="flex items-center">✅ Transacciones ilimitadas</li>
+                        <li class="flex items-center">✅ Hasta <b>2 ayudantes</b></li>
+                        <li class="flex items-center">✅ Historial de pagos</li>
+                        <li class="flex items-center">✅ Soporte básico</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_plan_esencial"
+                        class="block w-full bg-white border border-primary text-primary font-bold py-3 rounded-xl text-center hover:bg-blue-50 transition">
+                        Empezar Prueba Gratis
+                    </a>
+                </div>
+
+                <!-- Pro -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-primary shadow-xl transform md:-translate-y-4">
+                    <div class="uppercase tracking-wide text-sm text-primary font-bold mb-2">Recomendado</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan Pro</h3>
+                    <p class="text-gray-500 mb-4">Para negocios en crecimiento</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-gray-900">S/ 55</span>
+                        <span class="text-gray-500">/mes</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600">
+                        <li class="flex items-center">✅ <b>Todo lo del plan esencial</b></li>
+                        <li class="flex items-center">✅ Hasta <b>5 ayudantes</b></li>
+                        <li class="flex items-center">✅ Monitor Web Avanzado</li>
+                        <li class="flex items-center">✅ Soporte Prioritario 24/7</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_plan_pro"
+                        class="block w-full bg-primary text-white font-bold py-3 rounded-xl text-center hover:bg-primary-dark transition shadow-lg">
+                        Descargar y Probar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-10">Preguntas Frecuentes</h2>
+
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button
+                        class="faq-button w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50">
+                        <span class="font-bold text-gray-900">¿VerifyApp es oficial de Yape?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-gray-50">
+                        <div class="px-6 py-4 text-gray-600">
+                            No. VerifyApp es una herramienta independiente desarrollada por Aufaro Studio. No tenemos
+                            afiliación con el BCP ni Yape. Funcionamos leyendo las notificaciones de pago en tu
+                            dispositivo para ayudarte a gestionar tu negocio.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button
+                        class="faq-button w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50">
+                        <span class="font-bold text-gray-900">¿Es segura? ¿Necesito mi clave de Yape?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-gray-50">
+                        <div class="px-6 py-4 text-gray-600">
+                            Totalmente segura. <b>NUNCA te pediremos tu contraseña de Yape ni claves bancarias.</b>
+                            VerifyApp solo necesita permiso para leer las notificaciones que llegan a tu celular para
+                            confirmar los pagos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button
+                        class="faq-button w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50">
+                        <span class="font-bold text-gray-900">¿Necesita internet?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-gray-50">
+                        <div class="px-6 py-4 text-gray-600">
+                            Sí. Para sincronizar los pagos entre el administrador y los ayudantes en tiempo real, es
+                            necesario que los dispositivos tengan conexión a internet (datos o WiFi).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-primary py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-6">
+                Empieza hoy y protege tu negocio
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Únete a cientos de negocios peruanos que ya no sufren por pagos falsos.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_footer"
+                class="inline-block bg-white text-primary font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition">
+                Descargar Ahora
+            </a>
+            <p class="mt-4 text-sm text-blue-200">Prueba gratuita disponible. Cancela cuando quieras.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="../../img/icon-white.png" alt="Logo" class="h-8 w-auto"> <!-- Fallback icon -->
+                        <span class="text-xl font-bold">VerifyApp</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs">
+                        La herramienta líder en Perú para verificación de pagos móviles en tiempo real. Protegemos tu
+                        esfuerzo diario.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-200">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../../seguridad/politica_de_privacidad.html"
+                                class="hover:text-white transition">Política de Privacidad</a></li>
+                        <li><a href="../../seguridad/terminos_de_servicio.html"
+                                class="hover:text-white transition">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-200">Contacto</h4>
+                    <a href="https://wa.me/51907796591"
+                        class="flex items-center gap-2 text-gray-400 hover:text-white transition mb-2">
+                        <span>📱</span> WhatsApp Soporte
+                    </a>
+                    <p class="text-gray-400 text-sm">aufarostudio@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center px-4">
+                <p class="text-xs text-gray-500">
+                    <strong>Disclaimer:</strong> VerifyApp no está afiliada, asociada, autorizada, avalada ni de ninguna
+                    manera conectada oficialmente con Yape, el Banco de Crédito del Perú (BCP), ni ninguna de sus
+                    subsidiarias. "Yape" es una marca registrada de sus respectivos propietarios.
+                </p>
+                <p class="text-sm text-gray-500 mt-4">
+                    &copy; 2025 VerifyApp. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
