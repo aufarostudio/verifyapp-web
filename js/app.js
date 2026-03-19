@@ -34,38 +34,42 @@ function initApp() {
 
     let annual = false;
 
-    toggle.addEventListener('click', () => {
-        annual = !annual;
+    if (toggle && dot && labelMensual && labelAnual) {
+        toggle.addEventListener('click', () => {
+            annual = !annual;
 
-        toggle.classList.toggle('bg-primary-blue');
-        dot.classList.toggle('translate-x-7');
+            toggle.classList.toggle('bg-primary-blue');
+            dot.classList.toggle('translate-x-7');
 
-        labelMensual.classList.toggle('text-primary-blue');
-        labelMensual.classList.toggle('text-gray-500');
+            labelMensual.classList.toggle('text-primary-blue');
+            labelMensual.classList.toggle('text-gray-500');
 
-        labelAnual.classList.toggle('text-primary-blue');
-        labelAnual.classList.toggle('text-gray-500');
+            labelAnual.classList.toggle('text-primary-blue');
+            labelAnual.classList.toggle('text-gray-500');
 
-        prices.forEach(price => {
-            const period = price.parentElement.querySelector('.price-period');
-            const original = price.closest('.mb-6').querySelector('.price-original');
+            prices.forEach(price => {
+                const period = price.parentElement.querySelector('.price-period');
+                const original = price.closest('.mb-6').querySelector('.price-original');
 
-            if (annual) {
-                price.textContent = `S/ ${price.dataset.priceA}`;
-                period.textContent = price.dataset.periodA;
-                original.classList.remove('hidden');
-            } else {
-                price.textContent = `S/ ${price.dataset.priceM}`;
-                period.textContent = price.dataset.periodM;
-                original.classList.add('hidden');
-            }
+                if (annual) {
+                    price.textContent = `S/ ${price.dataset.priceA}`;
+                    period.textContent = price.dataset.periodA;
+                    if(original) original.classList.remove('hidden');
+                } else {
+                    price.textContent = `S/ ${price.dataset.priceM}`;
+                    period.textContent = price.dataset.periodM;
+                    if(original) original.classList.add('hidden');
+                }
+            });
         });
-    });
+    }
 
 
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 
     // Close menu when a link is clicked
     navLinks.forEach(link => {
@@ -94,9 +98,11 @@ function initApp() {
         if (!data) return;
 
         // Update text content
-        stepTitle.textContent = data.title;
-        stepDetail.textContent = data.detail;
-        stepVisual.innerHTML = `<p class="text-2xl font-semibold text-white">${data.visual}</p>`;
+        if (stepTitle && stepDetail && stepVisual) {
+            stepTitle.textContent = data.title;
+            stepDetail.textContent = data.detail;
+            stepVisual.innerHTML = `<p class="text-2xl font-semibold text-white">${data.visual}</p>`;
+        }
 
         // Update active button styles
         stepNavs.forEach(nav => {
@@ -153,6 +159,28 @@ function initApp() {
                     answer.style.maxHeight = '0';
                 }
             });
+        });
+    }
+
+    // WhatsApp Floating Widget Logic
+    const waButton = document.getElementById('wa-button');
+    const waModal = document.getElementById('wa-modal');
+    const closeWaModal = document.getElementById('close-wa-modal');
+
+    if (waButton && waModal && closeWaModal) {
+        waButton.addEventListener('click', () => {
+            waModal.classList.toggle('hidden');
+        });
+
+        closeWaModal.addEventListener('click', () => {
+            waModal.classList.add('hidden');
+        });
+
+        // Close when clicking outside of the modal and button
+        document.addEventListener('click', (e) => {
+            if (!waButton.contains(e.target) && !waModal.contains(e.target)) {
+                waModal.classList.add('hidden');
+            }
         });
     }
 

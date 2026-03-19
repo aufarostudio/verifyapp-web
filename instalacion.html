@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de instalación y configuración</title>
+    <meta name="description" content="Guía de instalación y configuración de VerifyApp.">
+    <meta name="theme-color" content="#186ecc">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#186ecc',
+                        'primary-blue-dark': '#165EB8',
+                        'primary-blue-darkest': '#104780',
+                        'primary-blue-light': '#69A5E0',
+                        'primary-blue-bg': '#E8F2FA',
+                        'success-green': '#10B981',
+                        'whatsapp': '#25D366',
+                        'whatsapp-dark': '#128C7E',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="img/verifyApp-logo.png" alt="VerifyApp Logo Oficial" class="h-8 md:h-10" />
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#caracteristicas"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Beneficios</a>
+                    <a href="index.html#flujo" class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo
+                        Funciona</a>
+                    <a href="index.html#planes"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Planes</a>
+                    <a href="instalacion.html"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo
+                        instalar</a>
+                    <a href="https://monitor.verifyapp.nexiestudio.com/login/admin" target="_blank"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Ir a Monitor
+                        Web</a>
+                </nav>
+                <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg">
+                    &#9776;
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2">
+            <a href="index.html#caracteristicas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Beneficios</a>
+            <a href="index.html#flujo" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo Funciona</a>
+            <a href="index.html#planes" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Planes</a>
+            <a href="instalacion.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo instalar</a>
+            <a href="https://monitor.verifyapp.nexiestudio.com/login/admin" target="_blank"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ir a Monitor Web</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 bg-white min-h-[70vh]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
+                    Guía de instalación y configuración
+                </h1>
+                
+                <div class="rounded-xl shadow-2xl mb-8 overflow-hidden">
+                    <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/wkwdniknph.js" async type="module"></script><style>wistia-player[media-id='wkwdniknph']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wkwdniknph/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="wkwdniknph" aspect="1.7777777777777777"></wistia-player>
+                </div>
+
+                <p class="text-lg text-gray-600 mb-8">
+                    Sigue estos sencillos pasos en el video para configurar VerifyApp en tu dispositivo móvil.
+                </p>
+                <a href="index.html" class="inline-block px-6 py-3 font-semibold text-primary-blue border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition">
+                    Volver al inicio
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">VerifyApp</h4>
+                    <p class="text-sm text-gray-400 mb-4">Verifica tus pagos en tiempo real. Cero Fraude.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#caracteristicas" class="text-gray-400 hover:text-white">Beneficios</a></li>
+                        <li><a href="index.html#flujo" class="text-gray-400 hover:text-white">Cómo Funciona</a></li>
+                        <li><a href="index.html#app-screens" class="text-gray-400 hover:text-white">App en Acción</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="seguridad/terminos_de_servicio.html"
+                                class="text-gray-400 hover:text-white">Términos de Servicio</a></li>
+                        <li><a href="seguridad/politica_de_privacidad.html"
+                                class="text-gray-400 hover:text-white">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Contacto</h4>
+                    <p class="text-sm text-gray-400">aufarostudio@gmail.com</p>
+                </div>
+            </div>
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center">
+                <p class="text-sm text-gray-500">&copy; 2025 VerifyApp. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- WhatsApp Floating Button & Modal -->
+    <div class="fixed bottom-6 right-6 z-[100] group font-sans text-left">
+        <!-- Tooltip -->
+        <div id="wa-tooltip" class="absolute bottom-full right-0 mb-4 w-max opacity-0 transition-opacity duration-300 pointer-events-none group-hover:opacity-100">
+            <div class="bg-gray-800 text-white text-sm py-2 px-4 rounded-xl shadow-lg relative">
+                ¿Necesitas ayuda?
+                <div class="absolute -bottom-2 right-6 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"></div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div id="wa-modal" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 origin-bottom-right">
+            <div class="bg-whatsapp text-white p-4 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img src="/img/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6">
+                    <h3 class="font-bold text-base m-0 p-0">Te ayudamos por Whatsapp</h3>
+                </div>
+                <button id="close-wa-modal" class="text-white hover:text-gray-200 text-2xl leading-none px-2">&times;</button>
+            </div>
+            <div class="p-5 bg-gray-50 flex flex-col gap-3">
+                <a href="https://wa.me/51907796591?text=Soy%20cliente%20y%20tengo%20una%20consulta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none">
+                    <span class="text-2xl leading-none">🙋‍♂️</span>
+                    <span class="text-sm font-medium text-gray-700 m-0">Soy cliente y tengo una consulta</span>
+                </a>
+                <a href="https://wa.me/51907796591?text=Quiero%20activar%20mi%20plan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none">
+                    <span class="text-2xl leading-none">🚀</span>
+                    <span class="text-sm font-medium text-gray-700 m-0">Quiero activar mi plan</span>
+                </a>
+                <a href="https://wa.me/51907796591?text=Tengo%20otra%20consulta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none">
+                    <span class="text-2xl leading-none">💬</span>
+                    <span class="text-sm font-medium text-gray-700 m-0">Otros</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Button -->
+        <button id="wa-button" class="flex items-center justify-center w-14 h-14 bg-transparent hover:scale-110 rounded-full shadow-2xl transition-transform focus:outline-none">
+            <img src="/img/whatsapp-icon.png" alt="WhatsApp Ayuda" class="w-14 h-14 object-contain">
+            <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></div>
+        </button>
+    </div>
+
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>
