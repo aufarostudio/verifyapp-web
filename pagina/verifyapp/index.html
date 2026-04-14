@@ -31,6 +31,26 @@
             }
         }
     </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1238868085028661');
+        fbq('track', 'PageView');
+        fbq('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1238868085028661&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -63,7 +83,8 @@
                             class="mt-5 sm:mt-8 flex flex-col sm:flex-row items-center sm:justify-center lg:justify-start gap-6 animate-fade-in delay-200">
                             <div class="flex flex-col items-center sm:items-start gap-2">
                                 <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page"
-                                    class="inline-block transition-transform hover:scale-105">
+                                    class="inline-block transition-transform hover:scale-105"
+                                    onclick="fbq('track', 'Lead'); setTimeout(() => { window.location.href=this.href }, 100); return false;">
                                     <img src="/img/get-it-on-google-play-spanish.png" alt="Descarga en Google Play"
                                         class="h-14 md:h-16 w-auto" />
                                 </a>
@@ -317,7 +338,8 @@
                         <li class="flex items-center">✔ Soporte 24/7</li>
                     </ul>
                     <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_plan_esencial"
-                        class="block w-full bg-white border border-primary text-primary font-bold py-3 rounded-xl text-center hover:bg-blue-50 transition">
+                        class="block w-full bg-white border border-primary text-primary font-bold py-3 rounded-xl text-center hover:bg-blue-50 transition"
+                        onclick="fbq('track', 'Lead'); setTimeout(() => { window.location.href=this.href }, 100); return false;">
                         Empezar Prueba Gratis
                     </a>
                 </div>
@@ -339,7 +361,8 @@
                         <li class="flex items-center">✔ Soporte 24/7</li>
                     </ul>
                     <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_plan_pro"
-                        class="block w-full bg-primary text-white font-bold py-3 rounded-xl text-center hover:bg-primary-dark transition shadow-lg">
+                        class="block w-full bg-primary text-white font-bold py-3 rounded-xl text-center hover:bg-primary-dark transition shadow-lg"
+                        onclick="fbq('track', 'Lead'); setTimeout(() => { window.location.href=this.href }, 100); return false;">
                         Descargar y Probar
                     </a>
                 </div>
@@ -351,7 +374,8 @@
                     plan a la medida de tu negocio? Contáctanos.</p>
                 <a href="https://wa.me/51907796591?text=Me%20interesa%20VerifyApp%20para%20mi%20negocio,%20quiero%20un%20plan%20personalizado"
                     target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center bg-[#128C7E] hover:bg-[#075E54] text-white font-bold py-3 px-6 sm:px-8 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    class="inline-flex items-center justify-center bg-[#128C7E] hover:bg-[#075E54] text-white font-bold py-3 px-6 sm:px-8 rounded-xl shadow-lg transition-transform hover:scale-105"
+                    onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                     <img src="/img/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6 mr-3">
                     <span class="text-left sm:text-center text-sm sm:text-base">Me interesa VerifyApp para mi negocio,
                         quiero un plan personalizado</span>
@@ -432,7 +456,8 @@
                 Únete a cientos de negocios peruanos que ya no sufren por pagos falsos.
             </p>
             <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_footer"
-                class="inline-block bg-white text-primary font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition">
+                class="inline-block bg-white text-primary font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition"
+                onclick="fbq('track', 'Lead'); setTimeout(() => { window.location.href=this.href }, 100); return false;">
                 Descargar Ahora
             </a>
             <p class="mt-4 text-sm text-blue-200">Prueba gratuita disponible. Cancela cuando quieras.</p>
@@ -465,7 +490,9 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-gray-200">Contacto</h4>
                     <a href="https://wa.me/51907796591"
-                        class="flex items-center gap-2 text-gray-400 hover:text-white transition mb-2">
+                        class="flex items-center gap-2 text-gray-400 hover:text-white transition mb-2" target="_blank"
+                        rel="noopener noreferrer"
+                        onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                         <span>📱</span> WhatsApp Soporte
                     </a>
                     <p class="text-gray-400 text-sm">aufarostudio@gmail.com</p>

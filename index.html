@@ -39,6 +39,26 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
 
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1238868085028661');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1238868085028661&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -144,7 +164,8 @@
                             </span>
 
                             <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dweb_principal"
-                                target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer"
+                                onclick="fbq('track', 'Lead'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                                 <img src="img/get-it-on-google-play-spanish.png" alt="Disponible en Google Play"
                                     class="h-16 w-auto mx-auto sm:mx-0">
                             </a>
@@ -199,7 +220,8 @@
 
                     <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dweb_video_demo"
                         target="_blank" rel="noopener noreferrer"
-                        class="inline-block transition transform hover:scale-105">
+                        class="inline-block transition transform hover:scale-105"
+                        onclick="fbq('track', 'Lead'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                         <img src="/img/get-it-on-google-play-spanish.png" alt="Descargar ahora gratis en Google Play"
                             class="h-16 w-auto">
                     </a>
@@ -411,7 +433,8 @@
 
                         <a href="https://wa.me/51907796591?text=Hola,%20quiero%20probar%20VerifyApp%20Plan%20Esencial"
                             target="_blank"
-                            class="text-center px-6 py-3 font-semibold text-white bg-primary-blue rounded-xl hover:bg-primary-blue-dark transition">
+                            class="text-center px-6 py-3 font-semibold text-white bg-primary-blue rounded-xl hover:bg-primary-blue-dark transition"
+                            onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                             Probar gratis
                         </a>
                     </div>
@@ -454,7 +477,8 @@
 
                         <a href="https://wa.me/51907796591?text=Hola,%20quiero%20información%20del%20Plan%20Pro"
                             target="_blank"
-                            class="text-center px-6 py-3 font-semibold bg-white text-primary-blue rounded-xl hover:bg-gray-100 transition">
+                            class="text-center px-6 py-3 font-semibold bg-white text-primary-blue rounded-xl hover:bg-gray-100 transition"
+                            onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                             Contactar ventas
                         </a>
                     </div>
@@ -479,7 +503,8 @@
 
                         <a href="https://wa.me/51907796591?text=Hola,%20quiero%20un%20plan%20personalizado"
                             target="_blank"
-                            class="text-center px-6 py-3 font-semibold text-primary-blue border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition">
+                            class="text-center px-6 py-3 font-semibold text-primary-blue border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition"
+                            onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                             Hablar con ventas
                         </a>
                     </div>
@@ -666,7 +691,9 @@
                 <div class="mt-12 text-center">
                     <p class="text-lg text-gray-600 mb-4">¿Tienes más preguntas?</p>
                     <a href="https://api.whatsapp.com/send/?phone=51907796591&text=Tengo+una+pregunta+sobre+la+app+VerifyApp"
-                        class="inline-block px-8 py-3 text-lg font-semibold text-primary-blue bg-white border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition shadow-md">
+                        class="inline-block px-8 py-3 text-lg font-semibold text-primary-blue bg-white border-2 border-primary-blue rounded-xl hover:bg-primary-blue-bg transition shadow-md"
+                        target="_blank"
+                        onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                         Contáctanos
                     </a>
                 </div>
@@ -758,19 +785,22 @@
             <div class="p-5 bg-gray-50 flex flex-col gap-3">
                 <a href="https://wa.me/51907796591?text=Soy%20cliente%20y%20tengo%20una%20consulta" target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none">
+                    class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none"
+                    onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                     <span class="text-2xl leading-none">🙋‍♂️</span>
                     <span class="text-sm font-medium text-gray-700 m-0">Soy cliente y tengo una consulta</span>
                 </a>
                 <a href="https://wa.me/51907796591?text=Quiero%20activar%20mi%20plan" target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none">
+                    class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none"
+                    onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                     <span class="text-2xl leading-none">🚀</span>
                     <span class="text-sm font-medium text-gray-700 m-0">Quiero activar mi plan</span>
                 </a>
                 <a href="https://wa.me/51907796591?text=Tengo%20otra%20consulta" target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none">
+                    class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition decoration-none"
+                    onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                     <span class="text-2xl leading-none">💬</span>
                     <span class="text-sm font-medium text-gray-700 m-0">Otros</span>
                 </a>
