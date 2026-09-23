@@ -25,6 +25,10 @@
                             DEFAULT: '#186ecc',
                             dark: '#0d4b91',
                         },
+                        'primary-blue': '#186ecc',
+                        'primary-blue-dark': '#165EB8',
+                        'whatsapp': '#25D366',
+                        'whatsapp-dark': '#128C7E',
                         secondary: '#742284', // Yape-like accent
                     }
                 }
@@ -211,7 +215,7 @@
                             2
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">VerifyApp Detecta</h3>
-                        <p class="text-gray-600">La app lee la notificación oficial y verifica que sea real.</p>
+                        <p class="text-gray-600">La app lee la notificación oficial y notifica a tus ayudantes.</p>
                     </div>
                     <div class="text-center bg-white">
                         <div
@@ -291,10 +295,10 @@
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Instala la app
                             en el celular que recibe los Yapes.</li>
-                        <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Registra los
-                            ayudantes.</li>
                         <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Activa las
                             notificaciones.</li>
+                        <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Comparte el
+                            código de su CANAL a su ayudantes.</li>
                         <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> ¡Listo! La app
                             notificará automáticamente.</li>
                     </ul>
@@ -310,8 +314,8 @@
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Instala la app
                             en su propio celular.</li>
-                        <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Inicia sesión
-                            con las credenciales que le dio el admin.</li>
+                        <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Se conecta al
+                            CANAL que el admin le comparte.</li>
                         <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> Recibe una
                             notificación sonora y visual cada vez que pagan.</li>
                         <li class="flex items-center gap-2"><span class="flex-shrink-0 text-xl">🔹</span> No necesita
@@ -331,74 +335,77 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Esencial -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
-                    <div class="flex flex-wrap items-center gap-2 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">Plan Esencial</h3>
-                        <span class="text-green-800 bg-green-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                            2 meses gratis pagando anual
-                        </span>
-                    </div>
-                    <p class="text-gray-500 mb-4">Perfecto para empezar</p>
+                <!-- ESENCIAL -->
+                <div
+                    class="bg-white rounded-2xl p-8 border-2 border-primary-blue shadow-xl transform md:-translate-y-4 flex flex-col relative">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Plan Esencial</h3>
+                    <p class="text-gray-600 mb-6">Ideal para negocios pequeños</p>
+
                     <div class="mb-6">
-                        <span class="text-4xl font-extrabold text-gray-900">S/ 15</span>
-                        <span class="text-gray-500">/mes, y S/ 150 al año</span>
+                        <div class="flex items-end gap-2">
+                            <span class="text-4xl font-extrabold text-primary-blue">
+                                S/ 5
+                            </span>
+                            <span class="text-gray-500 price-period">/mes</span>
+                        </div>
                     </div>
-                    <ul class="space-y-4 mb-8 text-gray-600">
-                        <li class="flex items-center">✔ 3 días de prueba gratis</li>
-                        <li class="flex items-center">✔ Transacciones ilimitadas</li>
-                        <li class="flex items-center">✔ Panel web para (Pc, Laptop o tablet)</li>
-                        <li class="flex items-center">✔ Consulta por fechas</li>
-                        <li class="flex items-center">✔ Hasta 2 ayudantes</li>
-                        <li class="flex items-center">✔ Soporte 24/7</li>
+
+                    <ul class="space-y-3 text-gray-600 mb-8 flex-1">
+                        <li>✔ 5 días de prueba gratis</li>
+                        <li>✔ Transacciones ilimitadas</li>
+                        <li>
+                            <div>✔ Panel web para (Pc, Laptop o tablet)</div>
+                            <span
+                                class="inline-block mt-1 text-[11px] font-semibold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded-md">
+                                ¡Las notificaciones también llegan a tu PC, Laptop o Tablet!
+                            </span>
+                        </li>
+                        <li>✔ Consulta por fechas</li>
+                        <li>✔ Hasta <b>2 ayudantes</b></li>
+                        <li>✔ Soporte 24/7</li>
                     </ul>
+
                     <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_plan_esencial"
-                        class="block w-full bg-white border border-primary text-primary font-bold py-3 rounded-xl text-center hover:bg-blue-50 transition"
-                        onclick="fbq('track', 'Lead'); setTimeout(() => { window.location.href=this.href }, 100); return false;">
-                        Empezar Prueba Gratis
+                        target="_blank" rel="noopener noreferrer"
+                        class="text-center px-6 py-3 font-semibold text-white bg-primary-blue rounded-xl hover:bg-primary-blue-dark transition shadow-md"
+                        onclick="fbq('track', 'Lead'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
+                        Probar gratis
                     </a>
                 </div>
 
-                <!-- Pro -->
-                <div class="bg-white rounded-2xl p-8 border-2 border-primary shadow-xl transform md:-translate-y-4">
-                    <div class="uppercase tracking-wide text-sm text-primary font-bold mb-2">Recomendado</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan Pro</h3>
-                    <p class="text-gray-500 mb-4">Para negocios en crecimiento</p>
+                <!-- PERSONALIZADO -->
+                <div
+                    class="bg-gray-50 rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition flex flex-col">
                     <div class="mb-6">
-                        <span class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight block">Precio
-                            personalizado</span>
-                        <span class="text-sm font-medium text-gray-500 mt-1 block">según tu requerimiento</span>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight block">Plan
+                            Personalizado</span>
+                        <span class="text-sm font-medium text-gray-500 mt-1 block">Según tu requerimiento</span>
                     </div>
-                    <ul class="space-y-4 mb-8 text-gray-600">
-                        <li class="flex items-start"><span class="mr-2">✔</span><span>Todo el plan Esencial</span></li>
-                        <li class="flex items-start"><span class="mr-2">✔</span><span>El número de ayudantes se puede
-                                ampliar según la cantidad de tus trabajadores</span></li>
-                        <li class="flex items-start"><span class="mr-2">✔</span><span>API "Beta", para conectar con tu
-                                propio sistema</span></li>
-                        <li class="flex items-start"><span class="mr-2">✔</span><span>Panel web para (Pc, Laptop o
-                                tablet)</span></li>
+                    <ul class="space-y-4 mb-8 text-gray-600 flex-1">
+                        <li class="flex items-start"><span class="mr-2">✔</span><span>Todo el plan Esencial</span>
+                        </li>
+                        <li class="flex items-start"><span class="mr-2">✔</span><span>El número de ayudantes se
+                                puede ampliar según la cantidad de tus trabajadores</span></li>
+                        <li class="flex items-start"><span class="mr-2">✔</span><span>API "Beta", para conectar con
+                                tu propio sistema</span></li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✔</span>
+                            <div>
+                                <span>Panel web para (Pc, Laptop o tablet)</span>
+                                <span
+                                    class="block mt-1 text-[11px] font-semibold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded-md w-fit">
+                                    ¡Las notificaciones también llegan a tu PC, Laptop o Tablet!
+                                </span>
+                            </div>
+                        </li>
                     </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dlanding_page_plan_pro"
-                        class="block w-full bg-primary text-white font-bold py-3 rounded-xl text-center hover:bg-primary-dark transition shadow-lg"
-                        onclick="fbq('track', 'Lead'); setTimeout(() => { window.location.href=this.href }, 100); return false;">
-                        Descargar y Probar
+                    <a href="https://wa.me/51907796591?text=Hola,%20Quiero%20un%20plan%20personalizao%20de%20VerifyApp"
+                        class="block w-full bg-whatsapp text-white font-bold py-3 rounded-xl text-center hover:bg-whatsapp-dark transition shadow-lg"
+                        target="_blank" rel="noopener noreferrer"
+                        onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
+                        Personalizar mi Plan
                     </a>
                 </div>
-            </div>
-
-            <div
-                class="mt-12 text-center bg-blue-50 rounded-2xl p-8 border border-blue-100 max-w-4xl mx-auto shadow-sm">
-                <p class="text-lg text-gray-700 mb-6 font-medium">¿Tienes más de 5 trabajadores o deseas personalizar un
-                    plan a la medida de tu negocio? Contáctanos.</p>
-                <a href="https://wa.me/51907796591?text=Me%20interesa%20VerifyApp%20para%20mi%20negocio,%20quiero%20un%20plan%20personalizado"
-                    target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center bg-[#128C7E] hover:bg-[#075E54] text-white font-bold py-3 px-6 sm:px-8 rounded-xl shadow-lg transition-transform hover:scale-105"
-                    onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
-                    <img src="/img/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6 mr-3">
-                    <span class="text-left sm:text-center text-sm sm:text-base">Hola, Me interesa VerifyApp para mi
-                        negocio,
-                        quiero un plan personalizado</span>
-                </a>
             </div>
         </div>
     </section>

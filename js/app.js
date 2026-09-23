@@ -3,12 +3,12 @@ const STEPS = {
     1: {
         title: "1. Captura del Pago (Rol Admin)",
         detail: "El administrador instala la aplicación en el teléfono que recibe el Yape y la vincula para capturar las notificaciones. Se crea un registro de pago en nuestra base de datos en menos de un segundo.",
-        visual: '📱 Admin: Captura la notificación oficial de Yape y la encripta.'
+        visual: '📱 Admin: Captura la notificación oficial de Yape.'
     },
     2: {
         title: "2. Alerta en Tiempo Real (Rol Ayudante)",
-        detail: "El sistema inmediatamente emite una notificación de confirmación verificada a todos los números de 'Ayudantes' registrados por el Admin. ¡Tu equipo es el primero en saber!",
-        visual: '🔔 Ayudante: Recibe Notificación PUSH: Pago de S/XX.XX CONFIRMADO.'
+        detail: "El sistema inmediatamente emite una notificación de confirmación verificada a todos tus 'Ayudantes' registrados. ¡Tu equipo es el primero en saber!",
+        visual: '🔔 Ayudante: Recibe Notificación PUSH: Pago de S/15.00 CONFIRMADO.'
     },
     3: {
         title: "3. Confirmación Final en Panel",
@@ -25,44 +25,7 @@ function initApp() {
 
 
 
-    //planes y presios
-    const toggle = document.getElementById('billingToggle');
-    const dot = document.getElementById('toggleDot');
-    const prices = document.querySelectorAll('[data-price-m]');
-    const labelMensual = document.getElementById('label-mensual');
-    const labelAnual = document.getElementById('label-anual');
 
-    let annual = false;
-
-    if (toggle && dot && labelMensual && labelAnual) {
-        toggle.addEventListener('click', () => {
-            annual = !annual;
-
-            toggle.classList.toggle('bg-primary-blue');
-            dot.classList.toggle('translate-x-7');
-
-            labelMensual.classList.toggle('text-primary-blue');
-            labelMensual.classList.toggle('text-gray-500');
-
-            labelAnual.classList.toggle('text-primary-blue');
-            labelAnual.classList.toggle('text-gray-500');
-
-            prices.forEach(price => {
-                const period = price.parentElement.querySelector('.price-period');
-                const original = price.closest('.mb-6').querySelector('.price-original');
-
-                if (annual) {
-                    price.textContent = `S/ ${price.dataset.priceA}`;
-                    period.textContent = price.dataset.periodA;
-                    if(original) original.classList.remove('hidden');
-                } else {
-                    price.textContent = `S/ ${price.dataset.priceM}`;
-                    period.textContent = price.dataset.periodM;
-                    if(original) original.classList.add('hidden');
-                }
-            });
-        });
-    }
 
 
     if (menuButton && mobileMenu) {

@@ -264,9 +264,11 @@
                         <div class="text-4xl text-primary-blue mb-3">&#128100;</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Gestión de Ayudantes</h3>
                         <p class="text-gray-600">
-                            El Admin puede <span class="font-bold">registrar múltiples números de teléfono</span> de
-                            ayudantes. Cada uno recibirá
-                            la alerta y podrá consultar el panel de pagos.
+                            Tus ayudantes se pueden conectar <span class="font-bold">a tu canal de difusión</span>. Cada
+                            uno recibirá
+                            la alerta y podrá consultar el panel de pagos, <span class="font-bold italic">lo desactivas
+                                si ya no quieres que reciba las
+                                notificaciones.</span>
                         </p>
                     </div>
                     <div
@@ -290,9 +292,9 @@
                         El Flujo que Elimina la Duda y el Fraude
                     </h2>
                     <p class="mt-4 text-xl max-w-3xl mx-auto text-primary-blue-light">
-                        Entiende en 3 pasos cómo VerifyApp transforma un pago Yape en una <span
-                            class="font-bold">transacción 100%
-                            verificada</span> para el ayudante en tu LOCAL.
+                        Entiende en 3 pasos cómo VerifyApp transforma un pago de Yape en una <span
+                            class="font-bold">venta
+                            segura</span> para tus ayudantes en tu establecimiento físico, aunque no te encuentres allí.
                     </p>
                 </header>
 
@@ -331,50 +333,12 @@
                         <div id="step-visual"
                             class="p-6 bg-primary-blue-darkest rounded-lg border-2 border-primary-blue-dark min-h-[150px] flex items-center justify-center">
                             <p class="text-2xl font-semibold text-white">📱 Admin: Captura la notificación oficial de
-                                Yape y la encripta.</p>
+                                Yape.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="app-screens" class="py-24 bg-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <header class="text-center mb-16">
-                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                        VerifyApp en Acción: Tu Negocio Bajo Control
-                    </h2>
-                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-                        Visualiza la simplicidad y el poder de nuestra interfaz. Diseñada para que tú y tu equipo
-                        trabajen con total confianza.
-                    </p>
-                </header>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Panel del Administrador</h3>
-                        <img src="img/admin-dashboard.png" alt="Captura de pantalla: Panel del Administrador"
-                            class="app-screenshot">
-                        <p class="mt-4 text-gray-600 text-sm">Gestiona todas las transacciones desde una vista clara.
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Configuración de Ayudantes</h3>
-                        <img src="img/admin-config.png" alt="Captura de pantalla: Configuración de Ayudantes"
-                            class="app-screenshot">
-                        <p class="mt-4 text-gray-600 text-sm">Registra y administra los números de tu equipo fácilmente.
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Panel del Ayudante</h3>
-                        <img src="img/ayudante-dashboard.png" alt="Captura de pantalla: Panel del Ayudante"
-                            class="app-screenshot">
-                        <p class="mt-4 text-gray-600 text-sm">Confirmación instantánea de pagos para una venta segura.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
 
         <!-- PLANES Y PRECIOS -->
         <section id="planes" class="py-24 bg-white">
@@ -389,20 +353,6 @@
                         Empieza gratis y escala según el tamaño de tu equipo y volumen de ventas.
                     </p>
 
-                    <!-- Switch -->
-                    <div class="flex justify-center items-center gap-4 mt-8">
-                        <span id="label-mensual" class="font-semibold text-primary-blue">Mensual</span>
-
-                        <button id="billingToggle"
-                            class="relative w-14 h-7 bg-gray-300 rounded-full transition focus:outline-none">
-                            <span id="toggleDot"
-                                class="absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition"></span>
-                        </button>
-
-                        <span id="label-anual" class="font-semibold text-gray-500">
-                            Anual <span class="text-sm text-success-green">(2 meses gratis)</span>
-                        </span>
-                    </div>
                 </header>
 
                 <!-- Cards -->
@@ -410,52 +360,48 @@
 
                     <!-- ESENCIAL -->
                     <div
-                        class="bg-gray-50 rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition flex flex-col">
+                        class="bg-white rounded-2xl p-8 border-2 border-primary-blue shadow-xl transform md:-translate-y-4 flex flex-col relative">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Plan Esencial</h3>
                         <p class="text-gray-600 mb-6">Ideal para negocios pequeños</p>
 
                         <div class="mb-6">
                             <div class="flex items-end gap-2">
-                                <span class="text-4xl font-extrabold text-primary-blue" data-price-m="15"
-                                    data-price-a="150" data-period-m="/mes" data-period-a="/anual" data-original="180">
-                                    S/ 15
+                                <span class="text-4xl font-extrabold text-primary-blue">
+                                    S/ 5
                                 </span>
                                 <span class="text-gray-500 price-period">/mes</span>
-                            </div>
-
-                            <div class="text-sm text-gray-400 mt-1 hidden price-original">
-                                <span class="line-through">S/ 180</span>
-                                <span class="ml-1">por año</span>
                             </div>
                         </div>
 
                         <ul class="space-y-3 text-gray-600 mb-8 flex-1">
-                            <li>✔ 3 días de prueba gratis</li>
+                            <li>✔ 5 días de prueba gratis</li>
                             <li>✔ Transacciones ilimitadas</li>
-                            <li>✔ Panel web para (Pc, Laptop o tablet)</li>
+                            <li>
+                                <div>✔ Panel web para (Pc, Laptop o tablet)</div>
+                                <span class="inline-block mt-1 text-[11px] font-semibold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded-md">
+                                    ¡Las notificaciones también llegan a tu PC, Laptop o Tablet!
+                                </span>
+                            </li>
                             <li>✔ Consulta por fechas</li>
                             <li>✔ Hasta <b>2 ayudantes</b></li>
                             <li>✔ Soporte 24/7</li>
                         </ul>
 
-                        <a href="https://wa.me/51907796591?text=Hola,%20quiero%20probar%20VerifyApp%20Plan%20Esencial"
-                            target="_blank"
-                            class="text-center px-6 py-3 font-semibold text-white bg-primary-blue rounded-xl hover:bg-primary-blue-dark transition"
-                            onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
+                        <a href="https://play.google.com/store/apps/details?id=com.notificationcash.app&referrer=source%3Dweb_principal_plan"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-center px-6 py-3 font-semibold text-white bg-primary-blue rounded-xl hover:bg-primary-blue-dark transition shadow-md"
+                            onclick="fbq('track', 'Lead'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
                             Probar gratis
                         </a>
                     </div>
 
                     <!-- PRO -->
                     <div
-                        class="bg-white rounded-2xl p-8 border-2 border-primary-blue shadow-xl transform md:-translate-y-4 flex flex-col relative">
-                        <div class="uppercase tracking-wide text-sm text-primary-blue font-bold mb-2">Recomendado</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan Pro</h3>
-                        <p class="text-gray-500 mb-4">Para negocios en crecimiento</p>
+                        class="bg-gray-50 rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition flex flex-col">
                         <div class="mb-6">
-                            <span class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight block">Precio
-                                personalizado</span>
-                            <span class="text-sm font-medium text-gray-500 mt-1 block">según tu requerimiento</span>
+                            <span class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight block">Plan
+                                Personalizado</span>
+                            <span class="text-sm font-medium text-gray-500 mt-1 block">Según tu requerimiento</span>
                         </div>
                         <ul class="space-y-4 mb-8 text-gray-600 flex-1">
                             <li class="flex items-start"><span class="mr-2">✔</span><span>Todo el plan Esencial</span>
@@ -464,14 +410,21 @@
                                     puede ampliar según la cantidad de tus trabajadores</span></li>
                             <li class="flex items-start"><span class="mr-2">✔</span><span>API "Beta", para conectar con
                                     tu propio sistema</span></li>
-                            <li class="flex items-start"><span class="mr-2">✔</span><span>Panel web para (Pc, Laptop o
-                                    tablet)</span></li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✔</span>
+                                <div>
+                                    <span>Panel web para (Pc, Laptop o tablet)</span>
+                                    <span class="block mt-1 text-[11px] font-semibold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded-md w-fit">
+                                        ¡Las notificaciones también llegan a tu PC, Laptop o Tablet!
+                                    </span>
+                                </div>
+                            </li>
                         </ul>
-                        <a href="https://wa.me/51907796591?text=Hola,%20quiero%20información%20del%20Plan%20Pro"
-                            class="block w-full bg-primary-blue text-white font-bold py-3 rounded-xl text-center hover:bg-primary-blue-dark transition shadow-lg"
-                            target="_blank"
+                        <a href="https://wa.me/51907796591?text=Hola,%20Quiero%20un%20plan%20personalizao%20de%20VerifyApp"
+                            class="block w-full bg-whatsapp text-white font-bold py-3 rounded-xl text-center hover:bg-whatsapp-dark transition shadow-lg"
+                            target="_blank" rel="noopener noreferrer"
                             onclick="fbq('track', 'Contact'); setTimeout(() => { window.open(this.href, '_blank') }, 100); return false;">
-                            Descargar y Probar
+                            Personalizar mi Plan
                         </a>
                     </div>
 
