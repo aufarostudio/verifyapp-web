@@ -144,4 +144,68 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Custom Helpers Plan Modal Logic
+    const helperModal = document.getElementById('custom-helpers-modal');
+    const openHelperBtns = document.querySelectorAll('.open-helpers-modal');
+    const closeHelperBtn = document.getElementById('close-helpers-modal');
+    const cancelHelperBtn = document.getElementById('cancel-helpers-modal');
+    const helperSelect = document.getElementById('helpers-count-select');
+    const calcPriceDisplay = document.getElementById('calculated-price-display');
+    const submitHelperBtn = document.getElementById('submit-helpers-request');
+
+    const HELPER_PRICES = {
+        "4": { price: "S/ 10 / mes", text: "4" },
+        "6": { price: "S/ 15 / mes", text: "6" },
+        "8": { price: "S/ 20 / mes", text: "8" },
+        "10": { price: "S/ 25 / mes", text: "10" },
+        "más de 10": { price: "A cotizar (Más de 10)", text: "más de 10" }
+    };
+
+    if (helperModal) {
+        openHelperBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                helperModal.classList.remove('hidden');
+                helperModal.classList.add('flex');
+            });
+        });
+
+        const closeModal = () => {
+            helperModal.classList.add('hidden');
+            helperModal.classList.remove('flex');
+        };
+
+        if (closeHelperBtn) closeHelperBtn.addEventListener('click', closeModal);
+        if (cancelHelperBtn) cancelHelperBtn.addEventListener('click', closeModal);
+
+        helperModal.addEventListener('click', (e) => {
+            if (e.target === helperModal) {
+                closeModal();
+            }
+        });
+
+        if (helperSelect && calcPriceDisplay) {
+            helperSelect.addEventListener('change', () => {
+                const val = helperSelect.value;
+                const info = HELPER_PRICES[val] || HELPER_PRICES["4"];
+                calcPriceDisplay.textContent = info.price;
+            });
+        }
+
+        if (submitHelperBtn && helperSelect) {
+            submitHelperBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const val = helperSelect.value;
+                const info = HELPER_PRICES[val] || HELPER_PRICES["4"];
+                const msg = `Hola quiero un plan personalizado de Verifyapp, tengo ${info.text} trabajadores`;
+                const url = `https://wa.me/51907796591?text=${encodeURIComponent(msg)}`;
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Contact');
+                }
+                window.open(url, '_blank');
+                closeModal();
+            });
+        }
+    }
 });

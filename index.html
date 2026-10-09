@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -107,7 +107,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg-gray-50 font-sans text-gray-800">
+<body class="bg-gray-50 font-sans text-gray-800 overflow-x-hidden relative w-full">
 
     <header class="sticky top-0 bg-white shadow-md z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,7 +118,8 @@
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#caracteristicas"
                         class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Beneficios</a>
-                    <a href="#flujo" class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo
+                    <a href="#video-demo"
+                        class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo
                         Funciona</a>
                     <a href="#planes"
                         class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Planes</a>
@@ -127,34 +128,41 @@
                         instalar</a>
                     <a href="https://monitor.verifyapp.nexiestudio.com/login" target="_blank"
                         class="group inline-flex flex-col items-center justify-center transition-colors">
-                        <span class="text-sm font-semibold text-gray-600 group-hover:text-primary-blue transition-colors">Ir a Monitor Web</span>
-                        <span class="mt-0.5 inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/80 group-hover:bg-emerald-100 group-hover:border-emerald-300 transition-all uppercase leading-none">
+                        <span
+                            class="text-sm font-semibold text-gray-600 group-hover:text-primary-blue transition-colors">Ir
+                            a Monitor Web</span>
+                        <span
+                            class="mt-0.5 inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/80 group-hover:bg-emerald-100 group-hover:border-emerald-300 transition-all uppercase leading-none">
                             Nuevo
                         </span>
                     </a>
                 </nav>
-                <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg">
+                <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg focus:outline-none">
                     &#9776;
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2">
-            <a href="#caracteristicas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Beneficios</a>
-            <a href="#flujo" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo Funciona</a>
-            <a href="#planes" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Planes</a>
-            <a href="instalacion.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo instalar</a>
-            <a href="https://monitor.verifyapp.nexiestudio.com/login" target="_blank"
-                class="group px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 flex items-center justify-between transition-colors">
-                <div class="flex flex-col items-start">
-                    <span class="font-medium text-gray-800 group-hover:text-primary-blue transition-colors">Ir a Monitor Web</span>
-                    <span class="mt-0.5 inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/80 uppercase leading-none">
-                        Nuevo
-                    </span>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full bg-white border-b border-gray-200 shadow-2xl p-4">
+            <div class="flex flex-col space-y-1">
+                <a href="#caracteristicas" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Beneficios</a>
+                <a href="#video-demo" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Cómo Funciona</a>
+                <a href="#planes" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Planes</a>
+                <a href="instalacion.html" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Cómo instalar</a>
+                <div class="pt-2 border-t border-gray-100 mt-2">
+                    <a href="https://monitor.verifyapp.nexiestudio.com/login" target="_blank"
+                        class="flex items-center justify-between p-3.5 bg-emerald-50/70 border border-emerald-200/80 rounded-xl hover:bg-emerald-100/70 transition">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-bold text-gray-900">Ir a Monitor Web</span>
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider text-emerald-800 bg-emerald-200/90 uppercase leading-none">
+                                Nuevo
+                            </span>
+                        </div>
+                        <svg class="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
                 </div>
-                <svg class="w-4 h-4 text-gray-400 group-hover:text-primary-blue group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-            </a>
+            </div>
         </div>
     </header>
 
@@ -164,7 +172,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
                     <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-                        <span class="text-primary-blue [text-shadow:_0_0_10px_#ffffff,_0_0_20px_#ffffff]">Cero Fraude.</span> Control Total.
+                        <span class="text-primary-blue [text-shadow:_0_0_10px_#ffffff,_0_0_20px_#ffffff]">Cero
+                            Fraude.</span> Control Total.
                     </h1>
                     <p class="text-xl text-gray-600 mb-6">
                         VerifyApp: La solución definitiva para <span class="font-bold">verificar pagos Yape en tiempo
@@ -198,7 +207,7 @@
         </section>
 
         <!-- Video Demo Section -->
-        <section id="video-demo" class="py-16 bg-white">
+        <section id="video-demo" class="py-20 bg-gray-50/80 border-y border-gray-200/60">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
                     Así funciona VerifyApp
@@ -219,15 +228,11 @@
                 <div class="flex flex-col items-center">
                     <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8 text-lg font-medium text-gray-700">
                         <div
-                            class="flex items-center gap-2 bg-green-50 border border-green-500 rounded-lg px-4 py-2 shadow-sm">
+                            class="flex items-center gap-2 bg-white border border-green-500/80 rounded-lg px-4 py-2 shadow-xs">
                             <span class="text-green-500 text-xl">✔</span> Detecta el pago
                         </div>
                         <div
-                            class="flex items-center gap-2 bg-green-50 border border-green-500 rounded-lg px-4 py-2 shadow-sm">
-                            <span class="text-green-500 text-xl">✔</span> Lo confirma automáticamente
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-green-50 border border-green-500 rounded-lg px-4 py-2 shadow-sm">
+                            class="flex items-center gap-2 bg-white border border-green-500/80 rounded-lg px-4 py-2 shadow-xs">
                             <span class="text-green-500 text-xl">✔</span> Notifica a tus ayudantes
                         </div>
                     </div>
@@ -240,17 +245,19 @@
                                 alt="Descargar ahora gratis en Google Play" class="h-16 w-auto">
                         </a>
 
-                        <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-3 shadow-sm">
+                        <div
+                            class="flex items-center gap-4 bg-white border border-gray-200/80 rounded-xl p-3 shadow-xs">
                             <img src="/img/QR-Web-Principal.png" alt="Código QR para descargar VerifyApp"
-                                class="h-24 w-24 rounded-lg bg-white shadow-sm border border-gray-100">
+                                class="h-24 w-24 rounded-lg bg-white shadow-xs border border-gray-100">
                             <p class="text-sm text-gray-600 font-medium max-w-[150px] text-left leading-tight">Escanea
                                 el QR para descargar gratis desde Google Play</p>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
-        <section id="caracteristicas" class="py-24 bg-gray-100">
+        <section id="caracteristicas" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <header class="text-center mb-16">
                     <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -264,7 +271,7 @@
                 </header>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div
-                        class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start h-full">
+                        class="p-6 bg-slate-50 border border-slate-100 rounded-2xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="text-4xl text-primary-blue mb-3">&#128276;</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Notificación en Tiempo Real</h3>
                         <p class="text-gray-600">
@@ -274,7 +281,7 @@
                         </p>
                     </div>
                     <div
-                        class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start h-full">
+                        class="p-6 bg-slate-50 border border-slate-100 rounded-2xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="text-4xl text-primary-blue mb-3">&#128100;</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Gestión de Ayudantes</h3>
                         <p class="text-gray-600">
@@ -286,7 +293,7 @@
                         </p>
                     </div>
                     <div
-                        class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start h-full">
+                        class="p-6 bg-slate-50 border border-slate-100 rounded-2xl shadow-lg border-t-4 border-primary-blue flex flex-col items-start h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="text-4xl text-primary-blue mb-3">&#128202;</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Panel de Pagos Unificado</h3>
                         <p class="text-gray-600">
@@ -299,63 +306,8 @@
             </div>
         </section>
 
-        <section id="flujo" class="py-24 bg-primary-blue-darkest text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <header class="text-center mb-16">
-                    <h2 class="text-3xl font-extrabold sm:text-4xl text-white">
-                        El Flujo que Elimina la Duda y el Fraude
-                    </h2>
-                    <p class="mt-4 text-xl max-w-3xl mx-auto text-primary-blue-light">
-                        Entiende en 3 pasos cómo VerifyApp transforma un pago de Yape en una <span
-                            class="font-bold">venta
-                            segura</span> para tus ayudantes en tu establecimiento físico, aunque no te encuentres allí.
-                    </p>
-                </header>
-
-                <div class="grid md:grid-cols-12 gap-10 items-start">
-                    <div
-                        class="md:col-span-3 flex flex-col space-y-8 p-4 bg-primary-blue-darkest rounded-xl shadow-2xl">
-                        <h3 class="text-xl font-bold mb-4 text-primary-blue-light">Proceso de Verificación</h3>
-                        <button data-step="1"
-                            class="step-nav flex items-center space-x-3 text-left p-3 rounded-lg bg-primary-blue text-white transition hover:bg-primary-blue-dark">
-                            <span
-                                class="flow-step-dot w-6 h-6 flex items-center justify-center rounded-full text-sm font-bold bg-white text-primary-blue-dark">1</span>
-                            <span class="font-semibold">Captura del Pago (Admin)</span>
-                        </button>
-                        <button data-step="2"
-                            class="step-nav flex items-center space-x-3 text-left p-3 rounded-lg text-primary-blue-light transition hover:bg-primary-blue-dark hover:text-white">
-                            <span
-                                class="flow-step-dot w-6 h-6 flex items-center justify-center rounded-full text-sm font-bold border-2 border-primary-blue-light">2</span>
-                            <span class="font-semibold">Alerta en Tiempo Real (Ayudante)</span>
-                        </button>
-                        <button data-step="3"
-                            class="step-nav flex items-center space-x-3 text-left p-3 rounded-lg text-primary-blue-light transition hover:bg-primary-blue-dark hover:text-white">
-                            <span
-                                class="flow-step-dot w-6 h-6 flex items-center justify-center rounded-full text-sm font-bold border-2 border-primary-blue-light">3</span>
-                            <span class="font-semibold">Confirmación Final en Panel</span>
-                        </button>
-                    </div>
-
-                    <div class="md:col-span-9 bg-primary-blue-darkest p-8 rounded-xl shadow-2xl">
-                        <h3 id="step-title" class="text-3xl font-bold mb-4 text-white">1. Captura del Pago (Rol Admin)
-                        </h3>
-                        <p id="step-detail" class="text-lg text-primary-blue-light mb-6">
-                            El administrador instala la aplicación en el teléfono que recibe el Yape para
-                            capturar las notificaciones. Se crea un registro de pago en nuestra base de datos en menos
-                            de un segundo.
-                        </p>
-                        <div id="step-visual"
-                            class="p-6 bg-primary-blue-darkest rounded-lg border-2 border-primary-blue-dark min-h-[150px] flex items-center justify-center">
-                            <p class="text-2xl font-semibold text-white">📱 Admin: Captura la notificación oficial de
-                                Yape.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- PLANES Y PRECIOS -->
-        <section id="planes" class="py-24 bg-white">
+        <section id="planes" class="py-24 bg-gray-50/90 border-y border-gray-200/60">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <!-- Header -->
@@ -397,6 +349,11 @@
                                     ¡Las notificaciones también llegan a tu PC, Laptop o Tablet!
                                 </span>
                             </li>
+                            <li>
+                                ✔ Lectura de voz de notificaciones 🔊
+                                <span
+                                    class="ml-1.5 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold tracking-wider text-emerald-700 bg-emerald-100 border border-emerald-200/80 uppercase leading-none align-middle">Nuevo</span>
+                            </li>
                             <li>✔ Consulta por fechas</li>
                             <li>✔ Hasta <b>2 ayudantes</b></li>
                             <li>✔ Soporte 24/7</li>
@@ -421,8 +378,24 @@
                         <ul class="space-y-4 mb-8 text-gray-600 flex-1">
                             <li class="flex items-start"><span class="mr-2">✔</span><span>Todo el plan Esencial</span>
                             </li>
-                            <li class="flex items-start"><span class="mr-2">✔</span><span>El número de ayudantes se
-                                    puede ampliar según la cantidad de tus trabajadores</span></li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✔</span>
+                                <div class="flex items-center flex-wrap gap-1.5">
+                                    <span>Lectura de voz de notificaciones 🔊</span>
+                                    <span
+                                        class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold tracking-wider text-emerald-700 bg-emerald-100 border border-emerald-200/80 uppercase leading-none">Nuevo</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✔</span>
+                                <div>
+                                    <span>El número de ayudantes se puede ampliar según la cantidad de tus
+                                        trabajadores</span>
+                                    <a href="#"
+                                        class="open-helpers-modal underline font-bold text-primary-blue hover:text-primary-blue-dark text-xs block mt-1 cursor-pointer">tengo
+                                        más ayudantes</a>
+                                </div>
+                            </li>
                             <li class="flex items-start"><span class="mr-2">✔</span><span>API "Beta", para conectar con
                                     tu propio sistema</span></li>
                             <li class="flex items-start">
@@ -570,7 +543,7 @@
                         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                             <p class="text-gray-600 pl-8 pb-6">
                                 Puedes conectar hasta 2 ayudantes en el plan basico, si tienes más ayududantes tambien
-                                puedes conectarlo prebia personalizacion de tu plan por nuestro Whatsapp.
+                                puedes conectarlo previa personalización de tu plan por nuestro Whatsapp.
                             </p>
                         </div>
                     </div>
@@ -614,7 +587,7 @@
                         </div>
                         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                             <p class="text-gray-600 pl-8 pb-6">
-                                No. VerifyApp es una herramienta independiente desarrollada por Aufaro Studio. No
+                                No. VerifyApp es una herramienta independiente desarrollada por Nexi Estudio. No
                                 tenemos
                                 afiliación con el BCP ni Yape. Funcionamos leyendo las notificaciones de pago en tu
                                 dispositivo para ayudarte a gestionar tu negocio.
@@ -777,7 +750,7 @@
 
         <!-- Modal -->
         <div id="wa-modal"
-            class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 origin-bottom-right">
+            class="hidden absolute bottom-20 right-0 w-80 max-w-[calc(100vw-2.5rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 origin-bottom-right">
             <div class="bg-whatsapp text-white p-4 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <img src="/img/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6">
@@ -818,6 +791,88 @@
             <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse">
             </div>
         </button>
+    </div>
+
+    <!-- MODAL PERSONALIZAR PLAN POR AYUDANTES -->
+    <div id="custom-helpers-modal"
+        class="fixed inset-0 bg-black/60 z-[120] hidden items-center justify-center p-4 backdrop-blur-xs transition-opacity duration-300">
+        <div
+            class="bg-[#EBF7FC] rounded-[28px] max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-white/40 transform transition-transform">
+
+            <!-- Close Icon -->
+            <button id="close-helpers-modal"
+                class="absolute top-5 right-5 text-[#456b82] hover:text-[#16425b] text-2xl font-bold leading-none cursor-pointer focus:outline-none">&times;</button>
+
+            <!-- Header -->
+            <div class="flex items-center gap-3 mb-3">
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#009ee3]/15 flex items-center justify-center text-[#008cc9] flex-shrink-0">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9 0c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm9 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45v1.5h7v-1.5c0-2.33-4.67-3.5-7-3.5z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-[#16425b]">Personalizar Plan por Ayudantes</h3>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-[#456b82] mb-5 leading-relaxed">
+                Personaliza tu plan según la cantidad de ayudantes que necesites. Se añaden S/ 5.00 soles adicionales
+                por cada 2 ayudantes extras.
+            </p>
+
+            <!-- Field: Plan Base -->
+            <div class="relative mb-5 bg-[#e2f2f9]/70 rounded-xl border border-[#9fd3ea] p-3.5">
+                <span class="absolute -top-2.5 left-4 px-1.5 bg-[#EBF7FC] text-[11px] font-semibold text-[#008cc9]">Plan
+                    base</span>
+                <div class="text-sm font-semibold text-[#1a4968]">Mensual (S/ 5 / mes)</div>
+            </div>
+
+            <!-- Select: Cantidad de ayudantes -->
+            <div class="relative mb-5">
+                <span
+                    class="absolute -top-2.5 left-4 px-1.5 bg-[#EBF7FC] text-[11px] font-semibold text-[#008cc9] z-10">Cantidad
+                    de ayudantes</span>
+                <select id="helpers-count-select"
+                    class="w-full bg-[#EBF7FC] text-[#1a4968] font-bold text-sm rounded-xl border-2 border-[#009ee3] px-4 py-3.5 appearance-none focus:outline-none cursor-pointer pr-10 shadow-xs">
+                    <option value="4">4 ayudantes</option>
+                    <option value="6">6 ayudantes</option>
+                    <option value="8">8 ayudantes</option>
+                    <option value="10">10 ayudantes</option>
+                    <option value="más de 10">Más de 10 ayudantes</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#009ee3]">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Price Calculated Box -->
+            <div class="bg-[#8ed5f5] p-4 rounded-2xl mb-6 border border-[#6ec7f0]/40">
+                <span class="text-xs font-medium text-[#185375] block mb-1">Precio Calculado:</span>
+                <span id="calculated-price-display" class="text-2xl sm:text-3xl font-extrabold text-[#056094]">S/ 10 /
+                    mes</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col gap-3">
+                <button id="submit-helpers-request"
+                    class="bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold py-3.5 px-6 rounded-2xl w-full flex items-center justify-center gap-2 shadow-md transition-all text-base cursor-pointer">
+                    <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-.981z" />
+                    </svg>
+                    <span>Solicitar</span>
+                </button>
+                <button id="cancel-helpers-modal" type="button"
+                    class="text-center w-full text-sm font-bold text-[#008cc9] hover:underline cursor-pointer bg-transparent border-none py-1">
+                    Cancelar
+                </button>
+            </div>
+
+        </div>
     </div>
 
     <script src="js/app.js" defer></script>

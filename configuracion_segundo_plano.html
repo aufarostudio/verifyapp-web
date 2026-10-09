@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg-gray-50 font-sans text-gray-800">
+<body class="bg-gray-50 font-sans text-gray-800 overflow-x-hidden relative w-full">
 
     <header class="sticky top-0 bg-white shadow-md z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="index.html#caracteristicas"
                         class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Beneficios</a>
-                    <a href="index.html#flujo"
+                    <a href="index.html#video-demo"
                         class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Cómo Funciona</a>
                     <a href="index.html#planes"
                         class="text-sm font-medium text-gray-600 hover:text-primary-blue transition">Planes</a>
@@ -66,33 +66,32 @@
                         </span>
                     </a>
                 </nav>
-                <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg">
+                <button id="menu-button" class="md:hidden p-2 text-gray-600 hover:text-primary-blue rounded-lg focus:outline-none">
                     &#9776;
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2">
-            <a href="index.html#caracteristicas"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Beneficios</a>
-            <a href="index.html#flujo" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo Funciona</a>
-            <a href="index.html#planes" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Planes</a>
-            <a href="instalacion.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cómo instalar</a>
-            <a href="https://monitor.verifyapp.nexiestudio.com/login" target="_blank"
-                class="group px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 flex items-center justify-between transition-colors">
-                <div class="flex flex-col items-start">
-                    <span class="font-medium text-gray-800 group-hover:text-primary-blue transition-colors">Ir a Monitor
-                        Web</span>
-                    <span
-                        class="mt-0.5 inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/80 uppercase leading-none">
-                        Nuevo
-                    </span>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full max-w-full bg-white border-b border-gray-200 shadow-2xl p-4 overflow-hidden">
+            <div class="flex flex-col space-y-1">
+                <a href="index.html#caracteristicas" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Beneficios</a>
+                <a href="index.html#video-demo" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Cómo Funciona</a>
+                <a href="index.html#planes" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Planes</a>
+                <a href="instalacion.html" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary-blue hover:bg-gray-50 rounded-xl transition">Cómo instalar</a>
+                <div class="pt-2 border-t border-gray-100 mt-2">
+                    <a href="https://monitor.verifyapp.nexiestudio.com/login" target="_blank"
+                        class="flex items-center justify-between p-3.5 bg-emerald-50/70 border border-emerald-200/80 rounded-xl hover:bg-emerald-100/70 transition">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-bold text-gray-900">Ir a Monitor Web</span>
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-wider text-emerald-800 bg-emerald-200/90 uppercase leading-none">
+                                Nuevo
+                            </span>
+                        </div>
+                        <svg class="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
                 </div>
-                <svg class="w-4 h-4 text-gray-400 group-hover:text-primary-blue group-hover:translate-x-0.5 transition-all"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-            </a>
+            </div>
         </div>
     </header>
 
@@ -316,20 +315,37 @@
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Disclaimer -->
+        <section class="py-6 bg-gray-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-50">
+                <p class=" text-xs text-gray-500 leading-relaxed max-w-4xl mx-auto">
+                    <strong>Disclaimer:</strong> VerifyApp no está afiliada, asociada, autorizada, avalada ni de ninguna
+                    manera conectada oficialmente con Yape, el Banco de Crédito del Perú (BCP), ni ninguna de sus
+                    subsidiarias o afiliadas. "Yape" es una marca registrada de sus respectivos propietarios. VerifyApp
+                    es
+                    una herramienta independiente de software diseñada para la gestión de notificaciones y verificación
+                    interna de comercios.
+                </p>
+            </div>
+        </section>
+
         <footer class="bg-gray-800 text-white py-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-primary-blue-light">VerifyApp</h4>
                     <p class="text-sm text-gray-400 mb-4">Verifica tus pagos en tiempo real. Cero Fraude.</p>
+
+                    <a href="alternativa-yape-empresa.html"
+                        class="inline-block text-xs font-semibold text-[#742284] hover:text-white transition">
+                        ¿Buscas una alternativa a Yape Empresa? Conócelo aquí
+                    </a>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Navegación</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="index.html#caracteristicas" class="text-gray-400 hover:text-white">Beneficios</a>
-                        </li>
-                        <li><a href="index.html#flujo" class="text-gray-400 hover:text-white">Cómo Funciona</a></li>
-                        <li><a href="instalacion.html" class="text-gray-400 hover:text-white">Cómo instalar</a></li>
+                        <li><a href="index.html#caracteristicas" class="text-gray-400 hover:text-white">Beneficios</a></li>
+                        <li><a href="index.html#video-demo" class="text-gray-400 hover:text-white">Cómo Funciona</a></li>
+                        <li><a href="index.html#planes" class="text-gray-400 hover:text-white">Planes</a></li>
                     </ul>
                 </div>
                 <div>
@@ -344,6 +360,10 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-primary-blue-light">Contacto</h4>
                     <p class="text-sm text-gray-400">aufarostudio@gmail.com</p>
+                    <div class="flex space-x-4 mt-3">
+                        <span class="text-xl text-gray-400 hover:text-white cursor-pointer">&#128241;</span>
+                        <span class="text-xl text-gray-400 hover:text-white cursor-pointer">&#128231;</span>
+                    </div>
                 </div>
             </div>
             <div class="mt-10 pt-6 border-t border-gray-700 text-center">
@@ -367,7 +387,7 @@
 
         <!-- Modal -->
         <div id="wa-modal"
-            class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 origin-bottom-right">
+            class="hidden absolute bottom-20 right-0 w-80 max-w-[calc(100vw-2.5rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 origin-bottom-right">
             <div class="bg-whatsapp text-white p-4 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <img src="img/whatsapp-icon.png" alt="WhatsApp" class="w-6 h-6">

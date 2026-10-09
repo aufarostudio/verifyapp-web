@@ -37,8 +37,67 @@ function initApp() {
     // Close menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (!mobileMenu.classList.contains('hidden')) {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+
+    // --- Monitor Web Mobile Device Access Control ---
+    const monitorWebLinks = document.querySelectorAll('a[href*="monitor.verifyapp"]');
+
+    function createMonitorModal() {
+        let modal = document.getElementById('monitor-web-modal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'monitor-web-modal';
+            modal.className = 'fixed inset-0 bg-black/60 z-[150] hidden items-center justify-center p-4 backdrop-blur-xs transition-opacity duration-300';
+            modal.innerHTML = `
+                <div class="bg-[#EBF7FC] rounded-[28px] max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-white/50 text-center transform transition-transform">
+                    <button id="close-monitor-modal" class="absolute top-5 right-5 text-[#456b82] hover:text-[#16425b] text-2xl font-bold leading-none cursor-pointer focus:outline-none">&times;</button>
+                    <div class="w-16 h-16 rounded-2xl bg-[#186ecc]/15 text-[#186ecc] flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-[#16425b] mb-2 leading-tight">Acceso solo para Tablet, Laptop o PC</h3>
+                    <p class="text-sm text-[#456b82] mb-6 leading-relaxed">
+                        El Monitor Web de VerifyApp está diseñado para ser utilizado en pantallas más grandes como Tablet, Laptop o PC.
+                    </p>
+                    <button id="confirm-monitor-modal" class="w-full bg-[#186ecc] hover:bg-[#165EB8] text-white font-bold py-3.5 px-6 rounded-2xl transition shadow-md cursor-pointer text-base">
+                        Entendido
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            };
+
+            modal.querySelector('#close-monitor-modal').addEventListener('click', closeModal);
+            modal.querySelector('#confirm-monitor-modal').addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        }
+        return modal;
+    }
+
+    function isMobileDevice() {
+        const isSmallScreen = window.innerWidth < 768;
+        const isPhoneUA = /Android.*Mobile|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        return isSmallScreen || isPhoneUA;
+    }
+
+    monitorWebLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (isMobileDevice()) {
+                e.preventDefault();
+                const modal = createMonitorModal();
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
             }
         });
     });
@@ -145,6 +204,70 @@ function initApp() {
                 waModal.classList.add('hidden');
             }
         });
+    }
+
+    // --- Custom Helpers Plan Modal Logic ---
+    const helperModal = document.getElementById('custom-helpers-modal');
+    const openHelperBtns = document.querySelectorAll('.open-helpers-modal');
+    const closeHelperBtn = document.getElementById('close-helpers-modal');
+    const cancelHelperBtn = document.getElementById('cancel-helpers-modal');
+    const helperSelect = document.getElementById('helpers-count-select');
+    const calcPriceDisplay = document.getElementById('calculated-price-display');
+    const submitHelperBtn = document.getElementById('submit-helpers-request');
+
+    const HELPER_PRICES = {
+        "4": { price: "S/ 10 / mes", text: "4" },
+        "6": { price: "S/ 15 / mes", text: "6" },
+        "8": { price: "S/ 20 / mes", text: "8" },
+        "10": { price: "S/ 25 / mes", text: "10" },
+        "más de 10": { price: "A cotizar (Más de 10)", text: "más de 10" }
+    };
+
+    if (helperModal) {
+        openHelperBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                helperModal.classList.remove('hidden');
+                helperModal.classList.add('flex');
+            });
+        });
+
+        const closeModal = () => {
+            helperModal.classList.add('hidden');
+            helperModal.classList.remove('flex');
+        };
+
+        if (closeHelperBtn) closeHelperBtn.addEventListener('click', closeModal);
+        if (cancelHelperBtn) cancelHelperBtn.addEventListener('click', closeModal);
+
+        helperModal.addEventListener('click', (e) => {
+            if (e.target === helperModal) {
+                closeModal();
+            }
+        });
+
+        if (helperSelect && calcPriceDisplay) {
+            helperSelect.addEventListener('change', () => {
+                const val = helperSelect.value;
+                const info = HELPER_PRICES[val] || HELPER_PRICES["4"];
+                calcPriceDisplay.textContent = info.price;
+            });
+        }
+
+        if (submitHelperBtn && helperSelect) {
+            submitHelperBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const val = helperSelect.value;
+                const info = HELPER_PRICES[val] || HELPER_PRICES["4"];
+                const msg = `Hola quiero un plan personalizado de Verifyapp, tengo ${info.text} trabajadores`;
+                const url = `https://wa.me/51907796591?text=${encodeURIComponent(msg)}`;
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Contact');
+                }
+                window.open(url, '_blank');
+                closeModal();
+            });
+        }
     }
 
     // Inicializar lógica al cargar la página
